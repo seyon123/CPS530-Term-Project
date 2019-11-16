@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 cps530-tp/public/
+web: vendor/bin/heroku-php-apache2 public/
