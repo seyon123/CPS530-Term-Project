@@ -56,7 +56,18 @@ heroku git:remote -a PROJECT_NAME -r heroku
 ## Setup Encryption Key
 ```
 php artisan key:generate --show
-heroku config:set APP_KEY={your-key-here}
+heroku config:set APP_KEY={app_key_here}
+```
+
+## Add Config Vars To Heroku
+To set config vars inside Heroku, click "Settings" and then "Reveal Config Vars". Add the following variables:
+```
+APP_NAME={app_name_here}
+APP_ENV=production
+APP_KEY={app_key_here}
+APP_DEBUG=FALSE
+APP_URL={url ending with herokuapp.com}
+LOG_CHANNEL=errorlog
 ```
 
 ## GitHub Integration (optional)
