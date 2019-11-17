@@ -1,75 +1,248 @@
-# Laravel and Material UI on Heroku
-
+# Laravel and Material-UI with Heroku
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400">
 <img src="https://miro.medium.com/max/480/1*7LOWVelUHYS1iqeX34Whzg.png" width="200">
 </p>
 
-## About Laravel
+## Prerequisites 
+- [Git](https://git-scm.com/downloads)
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+- [Node.js](https://nodejs.org/en/download/)
+- [PHP](https://www.php.net/downloads.php)
+- [Composer](https://getcomposer.org/download/)  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Part 1: Laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Install Laravel
+```
+composer global require laravel/installer
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Create Laravel Project
+Change into the directory where the project is to be created, where `PROJECT_NAME` is the name of your project.
+```
+laravel new PROJECT_NAME
+cd PROJECT_NAME
+```
 
-## Learning Laravel
+## Add Procfile
+Create a custom `Procfile` inside the project root folder with the following:
+```
+web: vendor/bin/heroku-php-apache2 public/
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Initialize Git Repo
+```
+git init
+git add .
+git commit -m "Installed Laravel"
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Login To Heroku
+```
+heroku login
+```
 
-## Laravel Sponsors
+## Create New Heroku App
+```
+heroku create
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### If you already have an existing Heroku app, run these commands instead:
+```
+heroku list
+heroku git:remote -a PROJECT_NAME -r heroku
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+## Setup Encryption Key
+```
+php artisan key:generate --show
+heroku config:set APP_KEY={your-key-here}
+```
 
-## Contributing
+## GitHub Integration (optional)
+Link an existing GitHub repo to your project, where `REMOTE_URL` is the remote repository URL ending with `.git`.
+```
+git remote add origin REMOTE_URL
+git remote -v
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Commit Changes
+```
+git add .
+git commit -m "Initial deployment"
+```
 
-## Code of Conduct
+## Push Changes
+If using Heroku:
+```
+git push heroku master
+```
+If using GitHub (with Heroku auto-deploy enabled):
+```
+git push origin master
+```  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Part 2: Use React with Laravel
 
-## Security Vulnerabilities
+## React.js Scaffolding
+```
+php artisan preset react
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## React View
+- Create an `Index.js` file inside the `resources/js/components` directory.
+- Copy all the content from the `Example.js` file to the `Index.js` and make some changes.
 
-## License
+Inside the `app.js` file, we add the new component on the last line:
+```
+require('./components/Index');
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Render Elements
+Inside the `resources/views/welcome.blade.php` file, add the following lines in the `<body>`:
+```html
+<div class="content">
+    <div id="example" class="title m-b-md">
+    </div>
+</div>
+```
+After the `</body>` tag, add the following line:
+```html
+<script type="text/javascript" src="js/app.js"></script>
+``` 
+
+## Compile Assets
+```
+npm run dev
+```
+### For production code, run this instead:
+```
+npm run prod
+```
+
+## Start App
+```
+php artisan serve
+```
+
+### Don't forget to commit and push changes!  
+
+# Part 3: Material-UI
+
+## Install Material-UI
+```
+npm install @material-ui/core
+```
+
+## Roboto Font
+Add the following line to the `<head>` of your files.
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+```
+
+## Responsive Meta Tag
+```html
+<meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"/>
+```
+
+## Font Icons
+In order to use the font `Icon` component, you must first add the `Material icons` font.
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+```
+
+## SVG Icons
+In order to use prebuilt SVG Material icons, you must first install the @material-ui/icons package:
+```
+npm install @material-ui/icons
+```
+
+## Sample Code
+`index.html:`
+```html
+<div id="app"></div>
+```
+
+`index.js:`
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
+
+function App() {
+  return (
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>
+  );
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+```
+
+### Don't forget to commit and push changes!  
+
+# Part 4: Database (optional)
+
+## Create Database
+```
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+## Configure Database
+```
+heroku config
+```
+- Copy the `DATABASE_URL` and open the `config/database.php` file.
+- Change the default database to `pgsql` from `mysql`.
+
+Define the following at the top of the file, where `YOUR_DATABASE_URL` is the url copied from above:
+```php
+$DATABASE_URL=parse_url('YOUR_DATABASE_URL');
+```
+
+The `pgsql` database config array should look like this:
+```php
+'pgsql' => [
+            'driver' => 'pgsql',
+            'host' => $DATABASE_URL["host"],
+            'port' => $DATABASE_URL["port"],
+            'database' => ltrim($DATABASE_URL["path"], "/"),
+            'username' => $DATABASE_URL["user"],
+            'password' => $DATABASE_URL["pass"],
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'require',
+        ],
+```
+
+### Commit and push changes now!
+
+## Run Migrations
+```
+heroku run php artisan migrate
+```
+Enter `yes` if it asks to run the migration on `production`.
+
+## Authentication
+```
+composer require laravel/ui
+php artisan ui react --auth
+```
+
+### Don't forget to commit and push changes!  
+
+# References
+- [Getting Started on Heroku with PHP](https://devcenter.heroku.com/articles/getting-started-with-php#set-up)
+
+- [Getting Started with Laravel on Heroku](https://devcenter.heroku.com/articles/getting-started-with-laravel)
+
+- [Installation - Laravel](https://laravel.com/docs/6.x/installation)
+
+- [How to use React in a Laravel application](https://dev.to/lvtdeveloper/using-react-in-a-laravel-application-8fp)
+
+- [Installation - Material-UI](https://material-ui.com/getting-started/installation/)
+
+- [Authentication - Laravel](https://laravel.com/docs/6.x/authentication)
