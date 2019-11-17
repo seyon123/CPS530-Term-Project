@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    Welcome {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}!
                     You are logged in!
                 </div>
             </div>
