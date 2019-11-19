@@ -15,8 +15,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/summary', function () {
-    return view('summary');
+Route::get('/install', function () {
+    return view('install');
+});
+
+Route::get('/tutorial', function () {
+    return view('tutorial');
+});
+
+Route::get('/demo', function () {
+    return view('demo');
+});
+
+Route::get('/conclusion', function () {
+    return view('conclusion');
+});
+
+Route::get('/credits', function () {
+    return view('credits');
 });
 
 Auth::routes();
