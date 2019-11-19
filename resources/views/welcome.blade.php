@@ -40,10 +40,10 @@
                 <div id="button" class="m-b-md"></div><br>
                 <div class="text m-b-md"><h4>Created By:</h4></div>
                 <div class="links">
-                    <div class="link-container"><a href="https://github.com/lyjacky11">Jacky L</a></div>
-                    <div class="link-container"><a href="https://github.com/Alliyah-M">Alliyah M</a></div>
-                    <div class="link-container"><a href="https://github.com/JawwadK">Seyon R</a></div>
-                    <div class="link-container"><a href="https://github.com/seyon123">Jawwad K</a></div>
+                    <div class="link-container"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
+                    <div class="link-container"><a href="https://github.com/Alliyah-M" target="_blank">Alliyah M</a></div>
+                    <div class="link-container"><a href="https://github.com/JawwadK" target="_blank">Jawwad K</a></div>
+                    <div class="link-container"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
                 </div><br>
             </div>
         </div>
