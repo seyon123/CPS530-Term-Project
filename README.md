@@ -17,6 +17,15 @@
 composer global require laravel/installer
 ```
 
+### If there is any errors related to Composer:
+```
+composer install
+```
+or
+```
+composer update
+```
+
 ## Create Laravel Project
 Change into the directory where the project is to be created, where `PROJECT_NAME` is the name of your project.
 ```
