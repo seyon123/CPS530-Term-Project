@@ -39,7 +39,7 @@ html, body {
     font-size: 30px;
 }
 
-.text {
+.content > .text {
     margin: 0 20% 0 20%;
 }
 
