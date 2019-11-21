@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
 import logo from './logo.png';
 
-function CreateButton() {
-    return (
-      <Button variant="contained" color="primary">
-        I am a Material UI Button!
-      </Button>
-    );
-  }
+
+// function CreateButton() {
+//     return (
+//       <Button variant="contained" color="primary">
+//         I am a Material UI Button!
+//       </Button>
+//     );
+//   }
+
 
 export default class Title extends Component {
     render() {
@@ -28,7 +30,7 @@ export default class Title extends Component {
         );
     }
 }
-
+/*
 class Clock extends Component {
     constructor(props) {
       super(props);
@@ -58,7 +60,5 @@ class Clock extends Component {
       );
     }
   }
-
+*/
 ReactDOM.render(<Title/>, document.getElementById('title'));
-ReactDOM.render(<CreateButton/>, document.querySelector('#button'));
-ReactDOM.render(<Clock/>, document.getElementById('clock'));

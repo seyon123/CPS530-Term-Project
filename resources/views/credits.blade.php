@@ -22,6 +22,7 @@
                 <div class="link-container active"><a href="{{ url('/credits') }}">Credits</a></div>
             </div>
             <div class="content">
+                <div id="title" class="title m-b-md"></div><br>
                 <div class="title m-b-md">Credits</div>
                 <div class="text m-b-md">
                 In nibh mi, viverra eget nisi nec, tempor varius magna. Quisque ipsum ligula, ullamcorper at urna ac, sollicitudin efficitur lacus.
