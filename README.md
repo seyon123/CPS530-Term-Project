@@ -131,17 +131,18 @@ After the `</body>` tag, add the following line:
 ```html
 <script type="text/javascript" src="js/app.js"></script>
 ``` 
+## Local Dev Environment
 
-## Compile Assets
+### Compile and Watch for Asset Changes
 ```
-npm run dev
+npm run development -- --watch
 ```
 ### For production code, run this instead:
 ```
 npm run prod
 ```
 
-## Start App
+## Start Local Web Server
 ```
 php artisan serve
 ```
