@@ -1,6 +1,6 @@
 html, body {
     background-color: #fff;
-    color: #636b6f;
+    color: #505050;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     height: 100vh;
@@ -31,6 +31,7 @@ html, body {
 }
 
 .content {
+    margin-top: 80px;
     text-align: center;
 }
 
@@ -81,6 +82,7 @@ html, body {
 #menu {
     display: none;
     margin: 2%;
+    position: relative;
 }
 
 @media screen and (max-width: 800px) {
