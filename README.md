@@ -135,7 +135,7 @@ After the `</body>` tag, add the following line:
 
 ### Compile and Watch for Asset Changes
 ```
-npm run development -- --watch
+npm run watch
 ```
 ### For production code, run this instead:
 ```
