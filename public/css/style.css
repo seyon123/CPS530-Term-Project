@@ -31,7 +31,6 @@ html, body {
 }
 
 .content {
-    padding-top: 125px;
     text-align: center;
 }
 
@@ -77,4 +76,14 @@ html, body {
 .links > .active {
     background-color: lightgrey;
     
+}
+
+#menu {
+    display: none;
+    margin: 2%;
+}
+
+@media screen and (max-width: 800px) {
+    #navbar { display: none; }
+    #menu { display: inline-block; }
 }

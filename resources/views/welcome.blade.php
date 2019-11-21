@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
+        <div id="menu"></div>
         <div class="flex-center position-ref full-height">
             <!-- @if (Route::has('login'))
                 <div class="top-right links">
@@ -25,7 +26,8 @@
                     @endauth
                 </div>
             @endif -->
-            <div class="top-right links">
+
+            <div id="navbar" class="top-right links">
                 <div class="link-container active"><a href="{{ url('/') }}">Home</a></div>
                 <div class="link-container"><a href="{{ url('/install') }}">Install</a></div>
                 <div class="link-container"><a href="{{ url('/tutorial') }}">Tutorial</a></div>
