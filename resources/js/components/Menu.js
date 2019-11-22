@@ -7,7 +7,16 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+
+import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
+import GetAppIcon from '@material-ui/icons/GetApp';
+import FindInPageIcon from '@material-ui/icons/FindInPage';
+import WebAssetIcon from '@material-ui/icons/WebAsset';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import LinkIcon from '@material-ui/icons/Link';
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles({
   list: {
@@ -45,21 +54,27 @@ export default function CreateDrawer() {
     >
     <List>
         <ListItem button component="a" href="/">
+          <ListItemIcon><HomeIcon /></ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
         <ListItem button component="a" href="/install">
+          <ListItemIcon><GetAppIcon /></ListItemIcon>
           <ListItemText primary="Install" />
         </ListItem>
         <ListItem button component="a" href="/tutorial">
+          <ListItemIcon><FindInPageIcon /></ListItemIcon>
           <ListItemText primary="Tutorial" />
         </ListItem>
         <ListItem button component="a" href="/demo">
+          <ListItemIcon><WebAssetIcon /></ListItemIcon>
           <ListItemText primary="Demo" />
         </ListItem>
         <ListItem button component="a" href="/conclusion">
+          <ListItemIcon><AssignmentIcon /></ListItemIcon>
           <ListItemText primary="Conclusion" />
         </ListItem>
         <ListItem button component="a" href="/credits">
+          <ListItemIcon><LinkIcon /></ListItemIcon>
           <ListItemText primary="Credits" />
         </ListItem>
       </List>
