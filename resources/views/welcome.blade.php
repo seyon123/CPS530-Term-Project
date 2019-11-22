@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="position-ref full-height">
-            
+
             <!-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -42,6 +42,22 @@
                 <div id="title" class="title m-b-md"></div><br>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
                 <br><br>
+                <table class="boi">          
+                    <tr>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                    <tr>  
+                        <td>React and Lavarel Good</td>
+                        <td>React and Lavarel sometimes bad</td>
+                    </tr>
+                    <tr>
+                        <td>React and Lavarel Cool</td>
+                        <td>Sometimes React and Lavarel Stinky</td>
+                    </tr>
+                </table>
+
+
                 <div class="text m-b-md"><h4>Created By:</h4></div>
                 <div class="links">
                     <div class="link-container"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
