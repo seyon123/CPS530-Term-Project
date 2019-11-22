@@ -12,18 +12,19 @@
 
 # Part 1: Laravel
 
-## Install Laravel
+## Run Composer Installer
 ```
-composer global require laravel/installer
+composer install
 ```
 
 ### If there is any errors related to Composer:
 ```
-composer install
-```
-or
-```
 composer update
+```
+
+## Install Laravel
+```
+composer global require laravel/installer
 ```
 
 ## Create Laravel Project
