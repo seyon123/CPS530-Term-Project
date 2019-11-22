@@ -4,13 +4,13 @@ import Button from '@material-ui/core/Button';
 import logo from './logo.png';
 
 
-// function CreateButton() {
-//     return (
-//       <Button variant="contained" color="primary">
-//         I am a Material UI Button!
-//       </Button>
-//     );
-//   }
+function CreateButton() {
+  return (
+    <Button className="row justify-content-center" variant="outlined" color="primary"component="a" href="/install">
+      NEXT PAGE
+    </Button>
+  );
+}
 
 
 export default class Title extends Component {
@@ -62,3 +62,4 @@ class Clock extends Component {
   }
 */
 ReactDOM.render(<Title/>, document.getElementById('title'));
+ReactDOM.render(<CreateButton/>, document.querySelector('#button'));

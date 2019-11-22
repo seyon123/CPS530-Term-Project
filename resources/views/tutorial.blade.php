@@ -14,9 +14,9 @@
         <div id="navigation">
             <div id="menu"></div>
             <div id="navbar" class="flex-center position-ref links">
-                <div class="link-container active"><a href="{{ url('/') }}">Home</a></div>
+                <div class="link-container"><a href="{{ url('/') }}">Home</a></div>
                 <div class="link-container"><a href="{{ url('/install') }}">Install</a></div>
-                <div class="link-container"><a href="{{ url('/tutorial') }}">Tutorial</a></div>
+                <div class="link-container active"><a href="{{ url('/tutorial') }}">Tutorial</a></div>
                 <div class="link-container"><a href="{{ url('/demo') }}">Demo</a></div>
                 <div class="link-container"><a href="{{ url('/conclusion') }}">Conclusion</a></div>
                 <div class="link-container"><a href="{{ url('/credits') }}">Credits</a></div>
