@@ -9,7 +9,7 @@ export class HomeNext extends Component {
   render() {
     return (
       <Button className="row justify-content-center" variant="outlined" color="primary" component="a" href="/install">
-        Next<ArrowForward />
+        Get Started<ArrowForward />
         </Button>
     );
   }
