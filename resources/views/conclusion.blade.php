@@ -25,6 +25,8 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
+                <div id="prevButton" class="m-b-md"></div>
+                <div id="nextButton" class="m-b-md"></div><br><br>
                 <div class="title m-b-md">Conclusion</div>
                 <div class="text m-b-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec leo sit amet sem faucibus pulvinar. In nibh mi, viverra eget nisi nec, tempor varius magna.

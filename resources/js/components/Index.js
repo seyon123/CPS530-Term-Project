@@ -2,16 +2,24 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
 import logo from './logo.png';
+import ArrowBack from '@material-ui/icons/ArrowBackIos';
+import ArrowForward from '@material-ui/icons/ArrowForwardIos';
 
-
-function CreateButton() {
+function CreatePrevButton() {
   return (
-    <Button className="row justify-content-center" variant="outlined" color="primary"component="a" href="/install">
-      NEXT PAGE
+    <Button className="row justify-content-center" variant="outlined" color="primary" component="a" href="#">
+    <ArrowBack/>Previous
     </Button>
   );
 }
 
+function CreateNextButton() {
+  return (
+    <Button className="row justify-content-center" variant="outlined" color="primary" component="a" href="#">
+    Next<ArrowForward/>
+    </Button>
+  );
+}
 
 export default class Title extends Component {
     render() {
@@ -62,4 +70,6 @@ class Clock extends Component {
   }
 */
 ReactDOM.render(<Title/>, document.getElementById('title'));
-ReactDOM.render(<CreateButton/>, document.querySelector('#button'));
+// ReactDOM.render(<CreateButton/>, document.querySelector('#navButtons'));
+ReactDOM.render(<CreatePrevButton/>, document.querySelector('#prevButton'));
+ReactDOM.render(<CreateNextButton/>, document.querySelector('#nextButton'));

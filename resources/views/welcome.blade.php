@@ -40,7 +40,8 @@
 
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
-                <div id="button" class="m-b-md"></div><br>
+                <div id="prevButton" class="m-b-md"></div>
+                <div id="nextButton" class="m-b-md"></div><br><br>
                 <div class="text m-b-md"><h4>Created By:</h4></div>
                 <div class="links">
                     <div class="link-container"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>

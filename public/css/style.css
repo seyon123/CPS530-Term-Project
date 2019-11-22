@@ -79,8 +79,13 @@ html, body {
     
 }
 
-#navigation{
+#navigation {
     margin-bottom: 50px;
+}
+
+#prevButton, #nextButton {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 #navbar {
