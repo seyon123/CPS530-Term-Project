@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.png';
-import {HomeNext} from './Buttons';
+import {CreditsPrev} from './Buttons';
+import {CreditsNext} from './Buttons';
 
 export default class Title extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class Title extends Component {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="card">
-              <div className="card-header">Material UI and Laravel Framework</div>
+              <div className="card-header">Credits and References</div>
               <br></br>
               <div className="card-body"><img src={logo} alt="Logo" height="200" /></div>
             </div>
@@ -21,4 +22,5 @@ export default class Title extends Component {
   }
 }
 ReactDOM.render(<Title />, document.getElementById('title'));
-ReactDOM.render(<HomeNext />, document.getElementById('nextButton'));
+ReactDOM.render(<CreditsPrev />, document.getElementById('prevButton'));
+ReactDOM.render(<CreditsNext />, document.getElementById('nextButton'));

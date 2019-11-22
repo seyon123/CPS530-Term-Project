@@ -25,13 +25,14 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
-                <div id="prevButton" class="m-b-md"></div>
-                <div id="nextButton" class="m-b-md"></div><br><br>
-                <div class="title m-b-md">Demonstration Page</div>
                 <div class="text m-b-md">Demo 1</div>
                 <div class="text m-b-md">Demo 2</div>
+                <br><br>
+                <div class="navBtn" id="prevButton" class="m-b-md"></div>
+                <div class="navBtn" id="nextButton" class="m-b-md"></div>
+                <br><br>
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
 </html>

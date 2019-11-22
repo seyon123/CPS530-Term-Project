@@ -83,7 +83,7 @@ html, body {
     margin-bottom: 50px;
 }
 
-#prevButton, #nextButton {
+.navBtn {
     display: inline-block;
     margin: 0 10px;
 }

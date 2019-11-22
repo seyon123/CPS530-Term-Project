@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -86335,32 +86335,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes React and other helpers. It's a great starting point while
- * building robust, powerful web applications using React + Laravel.
- */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-
-__webpack_require__(/*! ./components/Menu */ "./resources/js/components/Menu.js");
-
-__webpack_require__(/*! ./components/Index */ "./resources/js/components/Index.js");
-
-/***/ }),
-
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -86758,10 +86732,10 @@ function (_Component11) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Index.js":
-/*!******************************************!*\
-  !*** ./resources/js/components/Index.js ***!
-  \******************************************/
+/***/ "./resources/js/components/Credits.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/Credits.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -86798,6 +86772,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Title =
 /*#__PURE__*/
 function (_Component) {
@@ -86822,7 +86797,7 @@ function (_Component) {
         className: "card"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card-header"
-      }, "Material UI and Laravel Framework"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Credits and References"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_2___default.a,
@@ -86837,7 +86812,8 @@ function (_Component) {
 
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null), document.getElementById('title'));
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_3__["HomeNext"], null), document.getElementById('nextButton'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_3__["CreditsPrev"], null), document.getElementById('prevButton'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_3__["CreditsNext"], null), document.getElementById('nextButton'));
 
 /***/ }),
 
@@ -86986,26 +86962,40 @@ module.exports = "/images/logo.png?b433a55d9c46ff3fd3dfe6696f88344e";
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
+/***/ "./resources/js/credits.js":
 /*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
+  !*** ./resources/js/credits.js ***!
   \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Jacky Ly\Documents\GitHub\CPS530-Term-Project\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Jacky Ly\Documents\GitHub\CPS530-Term-Project\resources\sass\app.scss */"./resources/sass/app.scss");
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes React and other helpers. It's a great starting point while
+ * building robust, powerful web applications using React + Laravel.
+ */
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/**
+ * Next, we will create a fresh React component instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+
+__webpack_require__(/*! ./components/Menu */ "./resources/js/components/Menu.js");
+
+__webpack_require__(/*! ./components/Credits */ "./resources/js/components/Credits.js");
+
+/***/ }),
+
+/***/ 5:
+/*!***************************************!*\
+  !*** multi ./resources/js/credits.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! C:\Users\Jacky Ly\Documents\GitHub\CPS530-Term-Project\resources\js\credits.js */"./resources/js/credits.js");
 
 
 /***/ })
