@@ -133,11 +133,11 @@ After the `</body>` tag, add the following line:
 ``` 
 ## Local Dev Environment
 
-### Compile and Watch for Asset Changes
+Compile and watch for asset changes:
 ```
 npm run watch
 ```
-### For production code, run this instead:
+For production deployment, run this instead:
 ```
 npm run prod
 ```
