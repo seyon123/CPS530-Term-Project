@@ -31,7 +31,7 @@ html, body {
 }
 
 .content {
-    margin-top: 7%;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -79,9 +79,17 @@ html, body {
     
 }
 
+#navigation{
+    margin-bottom: 50px;
+}
+
+#navbar {
+    margin: 22px;
+}
+
 #menu {
     display: none;
-    margin: 2%;
+    margin: 14px;
     position: relative;
 }
 

@@ -11,8 +11,18 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
-        <div id="menu"></div>
-        <div class="flex-center position-ref full-height">
+        <div id="navigation">
+            <div id="menu"></div>
+            <div id="navbar" class="flex-center position-ref links">
+                <div class="link-container active"><a href="{{ url('/') }}">Home</a></div>
+                <div class="link-container"><a href="{{ url('/install') }}">Install</a></div>
+                <div class="link-container"><a href="{{ url('/tutorial') }}">Tutorial</a></div>
+                <div class="link-container"><a href="{{ url('/demo') }}">Demo</a></div>
+                <div class="link-container"><a href="{{ url('/conclusion') }}">Conclusion</a></div>
+                <div class="link-container"><a href="{{ url('/credits') }}">Credits</a></div>
+            </div>
+        </div>
+        <div class="position-ref full-height">
             
             <!-- @if (Route::has('login'))
                 <div class="top-right links">
@@ -28,15 +38,6 @@
                 </div>
             @endif -->
 
-            <div id="navbar" class="top-right links">
-                <div class="link-container active"><a href="{{ url('/') }}">Home</a></div>
-                <div class="link-container"><a href="{{ url('/install') }}">Install</a></div>
-                <div class="link-container"><a href="{{ url('/tutorial') }}">Tutorial</a></div>
-                <div class="link-container"><a href="{{ url('/demo') }}">Demo</a></div>
-                <div class="link-container"><a href="{{ url('/conclusion') }}">Conclusion</a></div>
-                <div class="link-container"><a href="{{ url('/credits') }}">Credits</a></div>
-            </div>
-            
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
                 <div class="text m-b-md"><h4>Created By:</h4></div>
