@@ -16,7 +16,6 @@ import FindInPageIcon from '@material-ui/icons/FindInPage';
 import WebAssetIcon from '@material-ui/icons/WebAsset';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import LinkIcon from '@material-ui/icons/Link';
-import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles({
   list: {
