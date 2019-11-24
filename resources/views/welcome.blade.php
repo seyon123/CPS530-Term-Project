@@ -23,7 +23,6 @@
             </div>
         </div>
         <div class="position-ref full-height">
-
             <!-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -37,13 +36,22 @@
                     @endauth
                 </div>
             @endif -->
-
             <div class="content">
-                <div id="title" class="title m-b-md"></div><br>
+                <div id="title" class="title m-b-md"></div>
+                <div class="text m-b-md"><h4>Created By:</h4></div>
+                <div class="links">
+                    <div class="link-container"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
+                    <div class="link-container"><a href="https://github.com/Alliyah-M" target="_blank">Alliyah M</a></div>
+                    <div class="link-container"><a href="https://github.com/JawwadK" target="_blank">Jawwad K</a></div>
+                    <div class="link-container"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
+                </div>
+                <br>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
                 <br><br>
-                <h2 style="text-align:center">Front-end Framework: Material UI</h2>
-                <table class="snapshotFE">
+                <table class="snapshot" id="frontEnd">
+                    <tr>
+                    <th colspan="2"><h2>Front-end Framework: Material UI</h2></th>
+                    </tr>
                     <tr>  
                         <th>Popularity</th>
                         <td>Material-UI is the most popular React UI component library.</td>
@@ -69,14 +77,14 @@
                             <td>Not platform independent -Affiliation with Google ecosystem.</td>
                         </tr>
                     <tr>
-                        <th>Which developers use it and for what kind of websites?</th>
+                        <th>Examples and Use Cases</th>
                         <td>This frame work is currently used by Walmart, Bethesda, NASA and shutterstock. It is ideal for websites that provide an easy to use, clean and attractive user interface.</td>
                     </tr>
                 </table>
-
-                <br><br>
-                <h2 style="text-align:center">Back-end Framework: Laravel</h2>
-                <table class="snapshotBE">
+                <table class="snapshot" id="backEnd">
+                    <tr>
+                        <th colspan="2"><h2>Back-end Framework: Laravel</h2></th>
+                    </tr>
                     <tr>  
                         <th>Popularity</th>
                         <td>Introduced in 2011, Laravel has become the most popular free, open-source PHP framework.</td>
@@ -101,20 +109,10 @@
                                 <td>Community support is not widespread compared to other platforms.</td>
                             </tr>
                     <tr>
-                        <th>Which developers use it and for what kind of websites?</th>
+                        <th>Examples and Use Cases</th>
                         <td>Laravel is currently used to power startups.co, Fox47, and various other sites. This framework is ideal for developers who want to build B2B or enterprise websites that will evolve with changing web trends.</td>
                     </tr>
                 </table>
-
-
-                <div class="text m-b-md"><h4>Created By:</h4></div>
-                <div class="links">
-                    <div class="link-container"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
-                    <div class="link-container"><a href="https://github.com/Alliyah-M" target="_blank">Alliyah M</a></div>
-                    <div class="link-container"><a href="https://github.com/JawwadK" target="_blank">Jawwad K</a></div>
-                    <div class="link-container"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
-                </div>
-                <br><br>
             </div>
         </div>
     </body>

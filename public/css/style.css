@@ -1,3 +1,5 @@
+/* Global CSS Styles */
+
 html, body {
     background-color: #fff;
     color: #505050;
@@ -47,6 +49,15 @@ html, body {
     margin-bottom: 30px;
 }
 
+/* Links */
+.links > .link-container {
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 10px;
+    height: 40px;
+}
+
 .links > .link-container > a {
     color: #636b6f;
     padding: 0 20px;
@@ -55,28 +66,15 @@ html, body {
     letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase;
+    line-height: 40px;
 }
 
 .links > .link-container > a:hover {
     color: darkgrey;
 }
 
-.link-container {
-    text-align: center;
-    display: inline-block;
-    margin: 0 10px;
-    border-radius: 10px;
-    height: 40px;
-}
-
-.link-container > a {
-    line-height: 40px;
-    vertical-align: middle;
-}
-
 .links > .active {
     background-color: lightgrey;
-    
 }
 
 #navigation {
@@ -98,26 +96,20 @@ html, body {
     position: relative;
 }
 
-@media screen and (max-width: 800px) {
-    #navbar { display: none; }
-    #menu { display: block; }
-}
-table.snapshotFE{
-    margin-left:4em;
-    margin-right:4em;
+table.snapshot {
     text-align:center;
     font-size:16px;
+    width: 40%;
+    margin: auto 5%;
     border:1px solid #ddd;
-
 }
 
-table.snapshotBE{
-    margin-left:4em;
-    margin-right:4em;
-    text-align:center;
-    font-size:16px;
-    border:1px solid #ddd;
+#frontEnd {
+    float: left;
+}
 
+#backEnd {
+    float: right;
 }
 
 td, th{
@@ -125,4 +117,8 @@ td, th{
     padding: 1em;
 }
 
-
+@media screen and (max-width: 800px) {
+    #navbar { display: none; }
+    #menu { display: block; }
+    table.snapshot {width: auto; }
+}

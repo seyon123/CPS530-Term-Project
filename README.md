@@ -138,14 +138,15 @@ Compile and watch for asset changes:
 ```
 npm run watch
 ```
-For production deployment, run this instead:
-```
-npm run prod
-```
 
-## Start Local Web Server
+Start the local web server:
 ```
 php artisan serve
+```
+
+## Build Production Code
+```
+npm run prod
 ```
 
 ### Don't forget to commit and push changes!  
