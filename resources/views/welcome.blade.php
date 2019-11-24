@@ -42,18 +42,67 @@
                 <div id="title" class="title m-b-md"></div><br>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
                 <br><br>
-                <table class="boi">          
-                    <tr>
-                        <th>Pros</th>
-                        <th>Cons</th>
-                    </tr>
+                <h2 style="text-align:center">Front-end Framework: Material UI</h2>
+                <table class="snapshotFE">
                     <tr>  
-                        <td>React and Lavarel Good</td>
-                        <td>React and Lavarel sometimes bad</td>
+                        <th>Popularity</th>
+                        <td>Material-UI is the most popular React UI component library.</td>
                     </tr>
                     <tr>
-                        <td>React and Lavarel Cool</td>
-                        <td>Sometimes React and Lavarel Stinky</td>
+                        <th rowspan="3">Strengths</th>
+                        <td>Scalable, you can build a wide range of products.</td>
+
+                        <tr>
+                            <td>A smooth, easy and appealing interface.</td>
+                        </tr>
+                        <tr>
+                            <td>Well documented - makes it a beginner friendly front-end.</td>
+                        </tr>
+                    <tr>
+                        <th rowspan="3">Weaknesses</th>
+                        <td>Not great for heavy-data apps - Poor number of Data-originated Components</td>
+
+                        <tr>
+                            <td> It can be hard to discern interactive elements.</td>
+                        </tr>
+                        <tr>
+                            <td>Not platform independent -Affiliation with Google ecosystem.</td>
+                        </tr>
+                    <tr>
+                        <th>Which developers use it and for what kind of websites?</th>
+                        <td>This frame work is currently used by Walmart, Bethesda, NASA and shutterstock. It is ideal for websites that provide an easy to use, clean and attractive user interface.</td>
+                    </tr>
+                </table>
+
+                <br><br>
+                <h2 style="text-align:center">Back-end Framework: Laravel</h2>
+                <table class="snapshotBE">
+                    <tr>  
+                        <th>Popularity</th>
+                        <td>Introduced in 2011, Laravel has become the most popular free, open-source PHP framework.</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Strengths</th>
+                        <td>It can handle complex web applications securely, at a considerably faster pace than other frameworks.</td>
+                    </tr>
+                            <tr>
+                                <td>Laravel is suitable when developing applications with complex backend requirements, whether small or large.</td>
+                            </tr>
+                            <tr>
+                                <td>Artisan– Developing command line apps can be a breeze. It provides an outstanding Artisan CLI  that comprises of advanced tools which enable you to do tasks and migrations.</td>
+                    <tr>
+                        <th rowspan="3">Weaknesses</th>
+                        <td>To modify core behavior there will be a lack of options.</td>
+
+                            <tr>
+                                <td>Speed and performance will be affected.</td>
+                            </tr>
+                            <tr>
+                                <td>Community support is not widespread compared to other platforms.</td>
+                            </tr>
+                    <tr>
+                        <th>Which developers use it and for what kind of websites?</th>
+                        <td>Laravel is currently used to power startups.co, Fox47, and various other sites. This framework is ideal for developers who want to build B2B or enterprise websites that will evolve with changing web trends.</td>
                     </tr>
                 </table>
 
