@@ -4,6 +4,7 @@
     "/js/conclusion.js": "/js/conclusion.js",
     "/js/credits.js": "/js/credits.js",
     "/js/demo.js": "/js/demo.js",
-    "/js/install.js": "/js/install.js",
+    "/js/install-laravel.js": "/js/install-laravel.js",
+    "/js/install-ui.js": "/js/install-ui.js",
     "/js/tutorial.js": "/js/tutorial.js"
 }

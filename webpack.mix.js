@@ -12,7 +12,8 @@ const mix = require('laravel-mix');
  */
 
 mix.react('resources/js/app.js', 'public/js')
-   .react('resources/js/install.js', 'public/js')
+   .react('resources/js/install-laravel.js', 'public/js')
+   .react('resources/js/install-ui.js', 'public/js')
    .react('resources/js/tutorial.js', 'public/js')
    .react('resources/js/demo.js', 'public/js')
    .react('resources/js/conclusion.js', 'public/js')

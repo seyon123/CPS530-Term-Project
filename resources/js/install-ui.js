@@ -13,4 +13,4 @@ require('./bootstrap');
  */
 
 require('./components/Menu');
-require('./components/Install');
+require('./components/Install-UI');

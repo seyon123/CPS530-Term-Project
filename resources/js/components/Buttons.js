@@ -14,6 +14,26 @@ export class HomeNext extends Component {
     );
   }
 }
+// Installing Laravel
+export class InstallLaravel extends Component {
+  render() {
+    return (
+      <Button className="row justify-content-center" variant="outlined" color="primary" component="a" href="/install">
+        <ArrowBack />Install Laravel
+        </Button>
+    );
+  }
+}
+// Installing Material UI
+export class InstallUI extends Component {
+  render() {
+    return (
+      <Button className="row justify-content-center" variant="outlined" color="primary" component="a" href="/install-ui">
+        Install Material UI<ArrowForward />
+        </Button>
+    );
+  }
+}
 // Previous Button (Install)
 export class InstallPrev extends Component {
   render() {

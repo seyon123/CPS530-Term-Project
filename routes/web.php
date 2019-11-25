@@ -16,11 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/install', function () {
-    return view('install');
+    return view('install-laravel');
 });
 
-Route::get('/install-2', function () {
-    return view('install-2');
+Route::get('/install-ui', function () {
+    return view('install-ui');
 });
 
 Route::get('/tutorial', function () {

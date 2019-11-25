@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.png';
+import laravel from './laravel.png';
+import {InstallUI} from './Buttons';
 import {InstallPrev} from './Buttons';
 import {InstallNext} from './Buttons';
 
@@ -11,9 +12,8 @@ export default class Title extends Component {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="card">
-              <div className="card-header">Installing Material UI and Laravel</div>
-              <br></br>
-              <div className="card-body"><img src={logo} alt="Logo" height="200" /></div>
+              <div className="card-header">Installing Laravel</div>
+              <div className="card-body"><img src={laravel} alt="Laravel" width="250" /></div>
             </div>
           </div>
         </div>
@@ -22,5 +22,7 @@ export default class Title extends Component {
   }
 }
 ReactDOM.render(<Title />, document.getElementById('title'));
+ReactDOM.render(<InstallUI />, document.getElementById('installButton'));
+ReactDOM.render(<InstallUI />, document.getElementById('installButton2'));
 ReactDOM.render(<InstallPrev />, document.getElementById('prevButton'));
 ReactDOM.render(<InstallNext />, document.getElementById('nextButton'));

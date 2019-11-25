@@ -58,6 +58,7 @@
   }
 }
 
+/*
 html {
   font-size: 14px;
 }
@@ -73,10 +74,7 @@ html {
     font-size: 16px;
   }
 }
-
-body {
-  line-height: 1.85;
-}
+*/
 
 p,
 .air-p {
@@ -172,12 +170,6 @@ a:active {
 a,
 a:visited {
   text-decoration: none;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: lightgrey;
 }
 
 pre {

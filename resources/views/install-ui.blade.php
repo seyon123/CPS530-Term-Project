@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"/>
-        <title>{{ config('app.name', 'Laravel') }} | Installation</title>
+        <title>{{ config('app.name', 'Laravel') }} | Installing Material UI</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
@@ -24,11 +24,13 @@
         </div>
         <div class="position-ref full-height">
             <div class="content">
-                <div id="title" class="title m-b-md"></div><br>
+                <div id="title" class="title m-b-md"></div>
+                <div class="navBtn" id="installButton" class="m-b-md"></div>
+                <br><br>
                 <?php
-                include 'install-2.html';
+                include 'install-ui.html';
                 ?>
-                <a href="{{ url('/install') }}"> << GO BACK TO PART 1 >></a>
+                <div class="navBtn" id="installButton2" class="m-b-md"></div>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
@@ -36,5 +38,5 @@
             </div>
         </div>
     </body>
-    <!-- <script type="text/javascript" src="js/install.js"></script> -->
+    <script type="text/javascript" src="js/install-ui.js"></script>
 </html>
