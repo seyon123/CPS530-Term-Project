@@ -25,8 +25,9 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
-                <div class="text m-b-md">What is Material UI?</div>
-                <div class="text m-b-md">What is Laravel?</div>
+                <?php
+                include 'install.html';
+                ?>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>

@@ -1,0 +1,394 @@
+<html>
+<head>
+<style>
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+html {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 32rem) and (max-width: 48rem) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  line-height: 1.85;
+}
+
+p,
+.air-p {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+h1,
+.air-h1,
+h2,
+.air-h2,
+h3,
+.air-h3,
+h4,
+.air-h4 {
+  margin: 1.414rem 0 .5rem;
+  font-weight: inherit;
+  line-height: 1.42;
+}
+
+h1,
+.air-h1 {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+h2,
+.air-h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+.air-h3 {
+  font-size: 1.3rem;
+}
+
+h4,
+.air-h4 {
+  font-size: 1.1rem;
+}
+
+h5,
+.air-h5 {
+  font-size: 1rem;
+}
+
+h6,
+.air-h6 {
+  font-size: .9rem;
+}
+
+small,
+.air-small {
+  font-size: .7em;
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+/*
+img {
+  border-radius: 50%;
+  height: 200px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+a,
+a:visited {
+  color: #3498db;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #2980b9;
+}
+*/
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: lightgrey;
+}
+
+pre {
+  background-color: #fafafa;
+  padding: 1rem;
+  text-align: left;
+}
+
+blockquote {
+  margin: 0;
+  border-left: 5px solid #7a7a7a;
+  font-style: italic;
+  padding: 1.33em;
+  text-align: left;
+}
+
+ul,
+ol,
+li {
+  text-align: left;
+}
+
+p {
+  color: #777;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 2%;
+}
+
+li > a {
+	font-weight: 400;
+}
+</style>
+</head>
+<body>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+<li><a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install" target="_blank">Heroku CLI</a></li>
+<li><a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
+<li><a href="https://www.php.net/downloads.php" target="_blank">PHP</a></li>
+<li><a href="https://getcomposer.org/download/" target="_blank">Composer</a></li>
+</ul>
+
+<br>
+
+<h1 id="part-1-laravel">Part 1: Laravel</h1>
+<h2 id="run-composer-installer">Run Composer Installer</h2>
+<pre><code>composer <span class="hljs-keyword">install</span>
+</code></pre><h3 id="if-there-is-any-errors-related-to-composer-">If there is any errors related to Composer:</h3>
+<pre><code><span class="hljs-attribute">composer update</span>
+</code></pre><h2 id="install-laravel">Install Laravel</h2>
+<pre><code><span class="hljs-symbol">composer</span> <span class="hljs-meta">global</span> <span class="hljs-meta">require</span> laravel/installer
+</code></pre><h2 id="create-laravel-project">Create Laravel Project</h2>
+<p>Change into the directory where the project is to be created, where <code>PROJECT_NAME</code> is the name of your project.</p>
+<pre><code>laravel <span class="hljs-keyword">new</span> <span class="hljs-type">PROJECT_NAME</span>
+cd PROJECT_NAME
+</code></pre><h2 id="add-procfile">Add Procfile</h2>
+<p>Create a custom <code>Procfile</code> inside the project root folder with the following:</p>
+<pre><code><span class="hljs-string">web:</span> vendor<span class="hljs-regexp">/bin/</span>heroku-php-apache2 <span class="hljs-keyword">public</span>/
+</code></pre><h2 id="initialize-git-repo">Initialize Git Repo</h2>
+<pre><code>git init
+git <span class="hljs-keyword">add</span><span class="bash"> .
+</span>git commit -m <span class="hljs-string">"Installed Laravel"</span>
+</code></pre><h2 id="login-to-heroku">Login To Heroku</h2>
+<pre><code><span class="hljs-attribute">heroku login</span>
+</code></pre><h2 id="create-new-heroku-app">Create New Heroku App</h2>
+<pre><code><span class="hljs-attribute">heroku create</span>
+</code></pre><h3 id="if-you-already-have-an-existing-heroku-app-run-these-commands-instead-">If you already have an existing Heroku app, run these commands instead:</h3>
+<pre><code>heroku list
+heroku git:remote -<span class="hljs-selector-tag">a</span> PROJECT_NAME -r heroku
+</code></pre><h2 id="setup-encryption-key">Setup Encryption Key</h2>
+<pre><code>php artisan key:<span class="hljs-keyword">generate</span> --show
+heroku <span class="hljs-keyword">config</span>:set APP_KEY={app_key_here}
+</code></pre><h2 id="add-config-vars-to-heroku">Add Config Vars To Heroku</h2>
+<p>To set config vars inside Heroku, click &quot;Settings&quot; and then &quot;Reveal Config Vars&quot;. Add the following variables:</p>
+<pre><code><span class="hljs-attr">APP_NAME</span>={app_name_here}
+<span class="hljs-attr">APP_ENV</span>=production
+<span class="hljs-attr">APP_KEY</span>={app_key_here}
+<span class="hljs-attr">APP_DEBUG</span>=<span class="hljs-literal">FALSE</span>
+<span class="hljs-attr">APP_URL</span>={url ending with herokuapp.com}
+<span class="hljs-attr">LOG_CHANNEL</span>=errorlog
+</code></pre><h2 id="github-integration-optional-">GitHub Integration (optional)</h2>
+<p>Link an existing GitHub repo to your project, where <code>REMOTE_URL</code> is the remote repository URL ending with <code>.git</code>.</p>
+<pre><code>git remote <span class="hljs-keyword">add</span><span class="bash"> origin REMOTE_URL
+</span>git remote -v
+</code></pre><h2 id="commit-changes">Commit Changes</h2>
+<pre><code>git <span class="hljs-keyword">add</span><span class="bash"> .
+</span>git commit -m <span class="hljs-string">"Initial deployment"</span>
+</code></pre><h2 id="push-changes">Push Changes</h2>
+<p>If using Heroku:</p>
+<pre><code><span class="hljs-symbol">git</span> <span class="hljs-keyword">push </span>heroku master
+</code></pre><p>If using GitHub (with Heroku auto-deploy enabled):</p>
+<pre><code>git <span class="hljs-built_in">push</span> <span class="hljs-built_in">origin</span> master
+</code></pre>
+
+<br><br>
+
+<h1 id="part-2-use-react-with-laravel">Part 2: Use React with Laravel</h1>
+<h2 id="react-js-scaffolding">React.js Scaffolding</h2>
+<pre><code>php artisan preset react
+npm <span class="hljs-keyword">install</span>
+</code></pre><h2 id="react-view">React View</h2>
+<ul>
+<li>Create an <code>Index.js</code> file inside the <code>resources/js/components</code> directory.</li>
+<li>Copy all the content from the <code>Example.js</code> file to the <code>Index.js</code> and make some changes.</li>
+</ul>
+<p>Inside the <code>app.js</code> file, we add the new component on the last line:</p>
+<pre><code><span class="hljs-built_in">require</span>(<span class="hljs-string">'./components/Index'</span>);
+</code></pre><h2 id="render-elements">Render Elements</h2>
+<p>Inside the <code>resources/views/welcome.blade.php</code> file, add the following lines in the <code>&lt;body&gt;</code>:</p>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"content"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"example"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"title m-b-md"</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p>After the <code>&lt;/body&gt;</code> tag, add the following line:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2 id="local-dev-environment">Local Dev Environment</h2>
+<p>Compile and watch for asset changes:</p>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> watch</span>
+</code></pre><p>Start the local web server:</p>
+<pre><code><span class="hljs-attribute">php artisan serve</span>
+</code></pre><h2 id="build-production-code">Build Production Code</h2>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> prod</span>
+</code></pre><h3 id="don-t-forget-to-commit-and-push-changes-">Don&#39;t forget to commit and push changes!</h3>
+
+<br><br>
+
+<h1 id="part-3-material-ui">Part 3: Material-UI</h1>
+<h2 id="install-material-ui">Install Material-UI</h2>
+<pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> @<span class="hljs-keyword">material</span>-<span class="hljs-keyword">ui</span>/<span class="hljs-keyword">core</span>
+</code></pre><h2 id="roboto-font">Roboto Font</h2>
+<p>Add the following line to the <code>&lt;head&gt;</code> of your files.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"</span> /&gt;</span>
+</code></pre>
+<h2 id="responsive-meta-tag">Responsive Meta Tag</h2>
+<pre><code class="lang-html">&lt;meta <span class="hljs-attr">name="viewport"</span> <span class="hljs-attr">content="minimum-scale=1,</span> <span class="hljs-attr">initial-scale=1,</span> <span class="hljs-attr">width=device-width,</span> <span class="hljs-attr">shrink-to-fit=no"/&gt;</span>
+</code></pre>
+<h2 id="font-icons">Font Icons</h2>
+<p>In order to use the font <code>Icon</code> component, you must first add the <code>Material icons</code> font.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> /&gt;</span>
+</code></pre>
+<h2 id="svg-icons">SVG Icons</h2>
+<p>In order to use prebuilt SVG Material icons, you must first install the @material-ui/icons package:</p>
+<pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> @<span class="hljs-keyword">material</span>-<span class="hljs-keyword">ui</span>/<span class="hljs-keyword">icons</span>
+</code></pre><h2 id="sample-code">Sample Code</h2>
+<p><code>index.html:</code></p>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"app"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p><code>index.js:</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"contained"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span>&gt;</span>
+      Hello World
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>
+  );
+}
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>, document.querySelector('#app'));</span>
+</code></pre>
+<h3 id="don-t-forget-to-commit-and-push-changes-">Don&#39;t forget to commit and push changes!</h3>
+
+<br><br>
+
+<h1 id="part-4-setup-database">Part 4: Setup Database</h1>
+<h2 id="create-database">Create Database</h2>
+<pre><code><span class="hljs-selector-tag">heroku</span> <span class="hljs-selector-tag">addons</span><span class="hljs-selector-pseudo">:create</span> <span class="hljs-selector-tag">heroku-postgresql</span><span class="hljs-selector-pseudo">:hobby-dev</span>
+</code></pre><h2 id="configure-database">Configure Database</h2>
+<pre><code>heroku <span class="hljs-built_in">config</span>
+</code></pre><ul>
+<li>Copy the <code>DATABASE_URL</code> and open the <code>config/database.php</code> file.</li>
+<li>Change the default database to <code>pgsql</code> from <code>mysql</code>.</li>
+</ul>
+<p>Define the following at the top of the file, where <code>YOUR_DATABASE_URL</code> is the url copied from above:</p>
+<pre><code class="lang-php">$DATABASE_URL=parse_url(<span class="hljs-string">'YOUR_DATABASE_URL'</span>)<span class="hljs-comment">;</span>
+</code></pre>
+<p>The <code>pgsql</code> database config array should look like this:</p>
+<pre><code class="lang-php"><span class="hljs-string">'pgsql'</span> =&gt; [
+            <span class="hljs-string">'driver'</span> =&gt; <span class="hljs-string">'pgsql'</span>,
+            <span class="hljs-string">'host'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"host"</span>],
+            <span class="hljs-string">'port'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"port"</span>],
+            <span class="hljs-string">'database'</span> =&gt; ltrim($DATABASE_URL[<span class="hljs-string">"path"</span>], <span class="hljs-string">"/"</span>),
+            <span class="hljs-string">'username'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"user"</span>],
+            <span class="hljs-string">'password'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"pass"</span>],
+            <span class="hljs-string">'charset'</span> =&gt; <span class="hljs-string">'utf8'</span>,
+            <span class="hljs-string">'prefix'</span> =&gt; <span class="hljs-string">''</span>,
+            <span class="hljs-string">'schema'</span> =&gt; <span class="hljs-string">'public'</span>,
+            <span class="hljs-string">'sslmode'</span> =&gt; <span class="hljs-string">'require'</span>,
+        ],
+</code></pre>
+<h3 id="commit-and-push-changes-now-">Commit and push changes now!</h3>
+<h2 id="run-migrations">Run Migrations</h2>
+<pre><code>heroku <span class="hljs-keyword">run</span><span class="bash"> php artisan migrate</span>
+</code></pre><p>Enter <code>yes</code> if it asks to run the migration on <code>production</code>.</p>
+<h2 id="authentication">Authentication</h2>
+<pre><code>composer <span class="hljs-built_in">require</span> laravel/ui
+php artisan ui react <span class="hljs-comment">--auth</span>
+</code></pre><h3 id="don-t-forget-to-commit-and-push-changes-">Don&#39;t forget to commit and push changes!</h3>
+</body></html>
