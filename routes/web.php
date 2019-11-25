@@ -19,6 +19,10 @@ Route::get('/install', function () {
     return view('install');
 });
 
+Route::get('/install-2', function () {
+    return view('install-2');
+});
+
 Route::get('/tutorial', function () {
     return view('tutorial');
 });

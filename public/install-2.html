@@ -1,0 +1,113 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/install.css"/>
+</head>
+<body>
+<h1 id="part-2-use-react-with-laravel">Part 2: Use React with Laravel</h1>
+<h2 id="react-js-scaffolding">React.js Scaffolding</h2>
+<pre><code>php artisan preset react
+npm <span class="hljs-keyword">install</span>
+</code></pre><h2 id="react-view">React View</h2>
+<ul>
+<li>Create an <code>Index.js</code> file inside the <code>resources/js/components</code> directory.</li>
+<li>Copy all the content from the <code>Example.js</code> file to the <code>Index.js</code> and make some changes.</li>
+</ul>
+<p>Inside the <code>app.js</code> file, we add the new component on the last line:</p>
+<pre><code><span class="hljs-built_in">require</span>(<span class="hljs-string">'./components/Index'</span>);
+</code></pre><h2 id="render-elements">Render Elements</h2>
+<p>Inside the <code>resources/views/welcome.blade.php</code> file, add the following lines in the <code>&lt;body&gt;</code>:</p>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"content"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"example"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"title m-b-md"</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p>After the <code>&lt;/body&gt;</code> tag, add the following line:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2 id="local-dev-environment">Local Dev Environment</h2>
+<p>Compile and watch for asset changes:</p>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> watch</span>
+</code></pre><p>Start the local web server:</p>
+<pre><code><span class="hljs-attribute">php artisan serve</span>
+</code></pre><h2 id="build-production-code">Build Production Code</h2>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> prod</span>
+</code></pre><h3 id="don-t-forget-to-commit-and-push-changes-">Don&#39;t forget to commit and push changes!</h3>
+
+<br><br>
+
+<h1 id="part-3-material-ui">Part 3: Material-UI</h1>
+<h2 id="install-material-ui">Install Material-UI</h2>
+<pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> @<span class="hljs-keyword">material</span>-<span class="hljs-keyword">ui</span>/<span class="hljs-keyword">core</span>
+</code></pre><h2 id="roboto-font">Roboto Font</h2>
+<p>Add the following line to the <code>&lt;head&gt;</code> of your files.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"</span> /&gt;</span>
+</code></pre>
+<h2 id="responsive-meta-tag">Responsive Meta Tag</h2>
+<pre><code class="lang-html">&lt;meta <span class="hljs-attr">name="viewport"</span> <span class="hljs-attr">content="minimum-scale=1,</span> <span class="hljs-attr">initial-scale=1,</span> <span class="hljs-attr">width=device-width,</span> <span class="hljs-attr">shrink-to-fit=no"/&gt;</span>
+</code></pre>
+<h2 id="font-icons">Font Icons</h2>
+<p>In order to use the font <code>Icon</code> component, you must first add the <code>Material icons</code> font.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> /&gt;</span>
+</code></pre>
+<h2 id="svg-icons">SVG Icons</h2>
+<p>In order to use prebuilt SVG Material icons, you must first install the @material-ui/icons package:</p>
+<pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> @<span class="hljs-keyword">material</span>-<span class="hljs-keyword">ui</span>/<span class="hljs-keyword">icons</span>
+</code></pre><h2 id="sample-code">Sample Code</h2>
+<p><code>index.html:</code></p>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"app"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p><code>index.js:</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"contained"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span>&gt;</span>
+      Hello World
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>
+  );
+}
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>, document.querySelector('#app'));</span>
+</code></pre>
+<h3 id="don-t-forget-to-commit-and-push-changes-">Don&#39;t forget to commit and push changes!</h3>
+
+<br><br>
+
+<h1 id="part-4-setup-database">Part 4: Setup Database</h1>
+<h2 id="create-database">Create Database</h2>
+<pre><code><span class="hljs-selector-tag">heroku</span> <span class="hljs-selector-tag">addons</span><span class="hljs-selector-pseudo">:create</span> <span class="hljs-selector-tag">heroku-postgresql</span><span class="hljs-selector-pseudo">:hobby-dev</span>
+</code></pre><h2 id="configure-database">Configure Database</h2>
+<pre><code>heroku <span class="hljs-built_in">config</span>
+</code></pre><ul>
+<li>Copy the <code>DATABASE_URL</code> and open the <code>config/database.php</code> file.</li>
+<li>Change the default database to <code>pgsql</code> from <code>mysql</code>.</li>
+</ul>
+<p>Define the following at the top of the file, where <code>YOUR_DATABASE_URL</code> is the url copied from above:</p>
+<pre><code class="lang-php">$DATABASE_URL=parse_url(<span class="hljs-string">'YOUR_DATABASE_URL'</span>)<span class="hljs-comment">;</span>
+</code></pre>
+<p>The <code>pgsql</code> database config array should look like this:</p>
+<pre><code class="lang-php"><span class="hljs-string">'pgsql'</span> =&gt; [
+            <span class="hljs-string">'driver'</span> =&gt; <span class="hljs-string">'pgsql'</span>,
+            <span class="hljs-string">'host'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"host"</span>],
+            <span class="hljs-string">'port'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"port"</span>],
+            <span class="hljs-string">'database'</span> =&gt; ltrim($DATABASE_URL[<span class="hljs-string">"path"</span>], <span class="hljs-string">"/"</span>),
+            <span class="hljs-string">'username'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"user"</span>],
+            <span class="hljs-string">'password'</span> =&gt; $DATABASE_URL[<span class="hljs-string">"pass"</span>],
+            <span class="hljs-string">'charset'</span> =&gt; <span class="hljs-string">'utf8'</span>,
+            <span class="hljs-string">'prefix'</span> =&gt; <span class="hljs-string">''</span>,
+            <span class="hljs-string">'schema'</span> =&gt; <span class="hljs-string">'public'</span>,
+            <span class="hljs-string">'sslmode'</span> =&gt; <span class="hljs-string">'require'</span>,
+        ],
+</code></pre>
+<h3 id="commit-and-push-changes-now-">Commit and push changes now!</h3>
+<h2 id="run-migrations">Run Migrations</h2>
+<pre><code>heroku <span class="hljs-keyword">run</span><span class="bash"> php artisan migrate</span>
+</code></pre><p>Enter <code>yes</code> if it asks to run the migration on <code>production</code>.</p>
+<h2 id="authentication">Authentication</h2>
+<pre><code>composer <span class="hljs-built_in">require</span> laravel/ui
+php artisan ui react <span class="hljs-comment">--auth</span>
+</code></pre><h3 id="don-t-forget-to-commit-and-push-changes-">Don&#39;t forget to commit and push changes!</h3>
+<br>
+</body></html>

@@ -26,9 +26,9 @@
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
                 <?php
-                include 'install.html';
+                include 'install-2.html';
                 ?>
-                <a href="{{ url('/install-2') }}"> << GO TO PART 2 >></a>
+                <a href="{{ url('/install') }}"> << GO BACK TO PART 1 >></a>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
@@ -36,5 +36,5 @@
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="js/install.js"></script>
+    <!-- <script type="text/javascript" src="js/install.js"></script> -->
 </html>
