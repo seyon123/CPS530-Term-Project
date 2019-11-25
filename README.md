@@ -3,11 +3,14 @@
 <img src="https://miro.medium.com/max/480/1*7LOWVelUHYS1iqeX34Whzg.png" width="200">
 </p>
 
-# Table of Contents
-## [Part 1: Laravel](#part-1-laravel-1)
-## [Part 2: Use React with Laravel](#part-2-use-react-with-laravel-1)
-## [Part 3: Material-UI](#part-3-material-ui-1)
-## [Part 4: Setup Database](#part-4-setup-database-1)
+## Table of Contents
+[Part 1: Laravel](#part-1-laravel)
+
+[Part 2: Use React with Laravel](#part-2-use-react-with-laravel)
+
+[Part 3: Material-UI](#part-3-material-ui)
+
+[Part 4: Setup Database](#part-4-setup-database)
 
 ## Prerequisites 
 - [Git](https://git-scm.com/downloads)

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.png';
+import react from './logo.png';
+import laravel from './laravel.png';
 import {HomeNext} from './Buttons';
 
 export default class Title extends Component {
@@ -12,7 +13,8 @@ export default class Title extends Component {
             <div className="card">
               <div className="card-header">Material UI and Laravel Framework</div>
               <br></br>
-              <div className="card-body"><img src={logo} alt="Logo" height="200" /></div>
+              <div className="card-body"><p style={{textAlign: "center"}}><img src={react} alt="React" width="250" style={{marginRight: "5%"}}/>
+              <img src={laravel} alt="Laravel" width="250" style={{marginLeft: "5%"}}/></p></div>
             </div>
           </div>
         </div>

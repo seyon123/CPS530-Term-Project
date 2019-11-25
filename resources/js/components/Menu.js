@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles";
+
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
@@ -52,6 +54,11 @@ export default function CreateDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
     <List>
+        <ListItem></ListItem>
+        <ListItem>
+          <ListItemText primary="Menu" />
+        </ListItem>
+        <ListItem></ListItem>
         <ListItem button component="a" href="/">
           <ListItemIcon><HomeIcon /></ListItemIcon>
           <ListItemText primary="Home" />
@@ -76,9 +83,11 @@ export default function CreateDrawer() {
           <ListItemIcon><LinkIcon /></ListItemIcon>
           <ListItemText primary="Credits" />
         </ListItem>
+        <ListItem></ListItem>
       </List>
       <Divider/>
       <List>
+        <ListItem></ListItem>
         <ListItem>
             <ListItemText primary="CPS 530 - Fall 2019" />
         </ListItem>
