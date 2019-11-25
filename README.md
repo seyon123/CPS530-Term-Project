@@ -3,6 +3,9 @@
 <img src="https://miro.medium.com/max/480/1*7LOWVelUHYS1iqeX34Whzg.png" width="200">
 </p>
 
+# Table of Contents
+## [Part 1: Laravel](#part-1-laravel)
+
 ## Prerequisites 
 - [Git](https://git-scm.com/downloads)
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
