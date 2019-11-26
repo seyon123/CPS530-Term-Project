@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.png';
+import Profile1 from './Profile1';
+import Profile2 from './Profile2';
+import Profile3 from './Profile3';
+import Profile4 from './Profile4';
 import {CreditsPrev} from './Buttons';
 import {CreditsNext} from './Buttons';
 
@@ -22,5 +26,9 @@ export default class Title extends Component {
   }
 }
 ReactDOM.render(<Title />, document.getElementById('title'));
+ReactDOM.render(<Profile1 />, document.getElementById('profile1'));
+ReactDOM.render(<Profile2 />, document.getElementById('profile2'));
+ReactDOM.render(<Profile3 />, document.getElementById('profile3'));
+ReactDOM.render(<Profile4 />, document.getElementById('profile4'));
 ReactDOM.render(<CreditsPrev />, document.getElementById('prevButton'));
 ReactDOM.render(<CreditsNext />, document.getElementById('nextButton'));

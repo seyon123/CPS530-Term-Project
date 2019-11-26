@@ -13,4 +13,8 @@ require('./bootstrap');
  */
 
 require('./components/Menu');
+require('./components/Profile1');
+require('./components/Profile2');
+require('./components/Profile3');
+require('./components/Profile4');
 require('./components/Credits');

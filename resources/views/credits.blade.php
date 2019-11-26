@@ -25,6 +25,12 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
+                <div id="profilebox">
+                    <div id="profile1"></div>
+                    <div id="profile2"></div>
+                    <div id="profile3"></div>
+                    <div id="profile4"></div>
+                </div>
                 <div class="title m-b-md">Credits</div>
                 <div class="text m-b-md">
                 In nibh mi, viverra eget nisi nec, tempor varius magna. Quisque ipsum ligula, ullamcorper at urna ac, sollicitudin efficitur lacus.
