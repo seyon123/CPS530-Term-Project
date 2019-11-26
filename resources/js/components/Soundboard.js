@@ -52,14 +52,23 @@ const start9 = () => {
 
 const pauseAll = () => {
   audio1.pause()
+  audio1.currentTime = 0
   audio2.pause()
+  audio2.currentTime = 0
   audio3.pause()
+  audio3.currentTime = 0
   audio4.pause()
+  audio4.currentTime = 0
   audio5.pause()
+  audio5.currentTime = 0
   audio6.pause()
+  audio6.currentTime = 0
   audio7.pause()
+  audio7.currentTime = 0
   audio8.pause()
+  audio8.currentTime = 0
   audio9.pause()
+  audio9.currentTime = 0
 }
 
 const images = [
