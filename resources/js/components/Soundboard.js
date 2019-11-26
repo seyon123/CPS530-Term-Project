@@ -3,50 +3,56 @@ import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
+let audio = new Audio("./audio/mlg-airhorn.mp3")
+
+const start = () => {
+  audio.play()
+}
+
 const images = [
     {
       url: '/images/logo.png',
-      title: 'Breakfast',
+      title: 'MLG Air Horn',
       width: '33.3%',
     },
     {
-      url: '/static/images/grid-list/burgers.jpg',
+      url: '',
       title: 'Burgers',
       width: '33.3%',
     },
     {
-      url: '/static/images/grid-list/camera.jpg',
+      url: '/images/laravel.png',
       title: 'Camera',
+      width: '33.3%',
+    },
+    {
+      url: '',
+      title: 'Breakfast',
+      width: '33.3%',
+    },
+    {
+      url: '/images/laravel.png',
+      title: 'Laravel',
+      width: '33.3%',
+    },
+    {
+      url: '',
+      title: 'Camera',
+      width: '33.3%',
+    },
+    {
+      url: '/images/laravel.png',
+      title: 'Breakfast',
+      width: '33.3%',
+    },
+    {
+      url: '',
+      title: 'Burgers',
       width: '33.3%',
     },
     {
       url: '/images/logo.png',
-      title: 'Breakfast',
-      width: '33.3%',
-    },
-    {
-      url: '/static/images/grid-list/burgers.jpg',
-      title: 'Burgers',
-      width: '33.3%',
-    },
-    {
-      url: '/static/images/grid-list/camera.jpg',
-      title: 'Camera',
-      width: '33.3%',
-    },
-    {
-      url: '/images/logo.png',
-      title: 'Breakfast',
-      width: '33.3%',
-    },
-    {
-      url: '/static/images/grid-list/burgers.jpg',
-      title: 'Burgers',
-      width: '33.3%',
-    },
-    {
-      url: '/static/images/grid-list/camera.jpg',
-      title: 'Camera',
+      title: 'Material UI',
       width: '33.3%',
     },
   ];
@@ -138,6 +144,7 @@ const images = [
             style={{
               width: image.width,
             }}
+            onClick={start}
           >
             <span
               className={classes.imageSrc}
