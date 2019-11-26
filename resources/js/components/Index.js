@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import react from './logo.png';
 import laravel from './laravel.png';
+import Grid from './Grid';
 import {HomeNext} from './Buttons';
 
 export default class Title extends Component {
@@ -22,5 +23,6 @@ export default class Title extends Component {
     );
   }
 }
+ReactDOM.render(<Grid />, document.getElementById('grid'));
 ReactDOM.render(<Title />, document.getElementById('title'));
 ReactDOM.render(<HomeNext />, document.getElementById('nextButton'));

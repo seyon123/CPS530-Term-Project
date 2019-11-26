@@ -14,3 +14,4 @@ require('./bootstrap');
 
 require('./components/Menu');
 require('./components/Index');
+require('./components/Grid');

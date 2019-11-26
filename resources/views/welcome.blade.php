@@ -48,7 +48,9 @@
                 <br>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
                 <br><br>
-                <table class="snapshot" id="frontEnd">
+                <br>
+                <div id="grid"></div>
+                <!-- <table class="snapshot" id="frontEnd">
                     <tr>
                     <th colspan="2"><h2>Front-end Framework: Material UI</h2></th>
                     </tr>
@@ -112,7 +114,8 @@
                         <th>Examples and Use Cases</th>
                         <td>Laravel is currently used to power startups.co, Fox47, and various other sites. This framework is ideal for developers who want to build B2B or enterprise websites that will evolve with changing web trends.</td>
                     </tr>
-                </table>
+                </table> -->
+                <br><br>
             </div>
         </div>
     </body>

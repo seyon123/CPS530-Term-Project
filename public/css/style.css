@@ -117,6 +117,12 @@ td, th{
     padding: 1em;
 }
 
+#grid {
+    margin: 0 4%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 800px) {
     #navbar { display: none; }
     #menu { display: block; }
