@@ -3,56 +3,118 @@ import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
-let audio = new Audio("./audio/mlg-airhorn.mp3")
+let audio1 = new Audio("./animals/bear.mp3")
+let audio2 = new Audio("./animals/camel.mp3")
+let audio3 = new Audio("./animals/cougar.wav")
+let audio4 = new Audio("./animals/cricket.wav")
+let audio5 = new Audio("./animals/elephant.wav")
+let audio6 = new Audio("./animals/frog.wav")
+let audio7 = new Audio("./animals/gibbon.mp3")
+let audio8 = new Audio("./animals/harbor-seal.mp3")
+let audio9 = new Audio("./animals/leopard.wav")
 
-const start = () => {
-  audio.play()
+const start1 = () => {
+  pauseAll()
+  audio1.play()
+}
+const start2 = () => {
+  pauseAll()
+  audio2.play()
+}
+const start3 = () => {
+  pauseAll()
+  audio3.play()
+}
+const start4 = () => {
+  pauseAll()
+  audio4.play()
+}
+const start5 = () => {
+  pauseAll()
+  audio5.play()
+}
+const start6 = () => {
+  pauseAll()
+  audio6.play()
+}
+const start7 = () => {
+  pauseAll()
+  audio7.play()
+}
+const start8 = () => {
+  pauseAll()
+  audio8.play()
+}
+const start9 = () => {
+  pauseAll()
+  audio9.play()
+}
+
+const pauseAll = () => {
+  audio1.pause()
+  audio2.pause()
+  audio3.pause()
+  audio4.pause()
+  audio5.pause()
+  audio6.pause()
+  audio7.pause()
+  audio8.pause()
+  audio9.pause()
 }
 
 const images = [
     {
-      url: '/images/logo.png',
-      title: 'MLG Air Horn',
+      url: '/animals/bear.jpg',
+      audio: 'start1',
+      title: 'Bear',
       width: '33.3%',
     },
     {
-      url: '',
-      title: 'Burgers',
+      url: '/animals/camel.jpg',
+      audio: 'start2',
+      title: 'Camel',
       width: '33.3%',
     },
     {
-      url: '/images/laravel.png',
-      title: 'Camera',
+      url: '/animals/cougar.jpg',
+      audio: 'start3',
+      title: 'Cougar',
       width: '33.3%',
     },
     {
-      url: '',
-      title: 'Breakfast',
+      url: '/animals/cricket.jpg',
+      audio: 'start4',
+      title: 'Cricket',
       width: '33.3%',
     },
     {
-      url: '/images/laravel.png',
-      title: 'Laravel',
+      url: '/animals/elephant.jpg',
+      audio: 'start5',
+      title: 'Elephant',
       width: '33.3%',
     },
     {
-      url: '',
-      title: 'Camera',
+      url: '/animals/frog.jpg',
+      audio: 'start6',
+      title: 'Frog',
       width: '33.3%',
     },
     {
-      url: '/images/laravel.png',
-      title: 'Breakfast',
+      url: '/animals/gibbon.jpg',
+      audio: 'start7',
+      title: 'Gibbon',
       width: '33.3%',
     },
     {
-      url: '',
-      title: 'Burgers',
+      url: '/animals/harbor-seal.jpg',
+      audio: 'start8',
+      title: 'Harbor Seal',
       width: '33.3%',
     },
     {
-      url: '/images/logo.png',
-      title: 'Material UI',
+      url: '/animals/leopard.jpg',
+      audio: 'start9',
+      title: 'Leopard',
       width: '33.3%',
     },
   ];
@@ -61,7 +123,7 @@ const images = [
     root: {
       display: 'flex',
       flexWrap: 'wrap',
-      minWidth: 300,
+      // minWidth: 300,
       width: '100%',
     },
     image: {
@@ -144,7 +206,7 @@ const images = [
             style={{
               width: image.width,
             }}
-            onClick={start}
+            onClick={eval(image.audio)}
           >
             <span
               className={classes.imageSrc}

@@ -26,9 +26,7 @@
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
                 <br><br>
-                <div id="soundbox">
-                    <div id="soundboard"></div>
-                </div>
+                <div id="soundboard"></div>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>

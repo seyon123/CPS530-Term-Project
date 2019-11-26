@@ -123,12 +123,14 @@ td, th{
     border-radius: 20px;
 }
 
-#soundbox {
-    margin: auto 7%;
+#soundboard {
+    margin: auto;
+    width: 60%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     #navbar { display: none; }
     #menu { display: block; }
     table.snapshot {width: auto; }
+    #soundboard > div > button { margin-top: 5px; }
 }
