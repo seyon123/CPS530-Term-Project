@@ -124,7 +124,7 @@ npm install
 - Create an `Index.js` file inside the `resources/js/components` directory.
 - Copy all the content from the `Example.js` file to the `Index.js` and make some changes.
 
-Inside the `app.js` file, we add the new component on the last line:
+Inside the `app.js` file, add the new component on the last line:
 ```
 require('./components/Index');
 ```

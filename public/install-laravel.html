@@ -33,9 +33,6 @@ git <span class="hljs-keyword">add</span><span class="bash"> .
 <pre><code><span class="hljs-attribute">heroku login</span>
 </code></pre><h2 id="create-new-heroku-app">Create New Heroku App</h2>
 <pre><code><span class="hljs-attribute">heroku create</span>
-</code></pre><h3 id="if-you-already-have-an-existing-heroku-app-run-these-commands-instead-">If you already have an existing Heroku app, run these commands instead:</h3>
-<pre><code>heroku list
-heroku git:remote -<span class="hljs-selector-tag">a</span> PROJECT_NAME -r heroku
 </code></pre><h2 id="setup-encryption-key">Setup Encryption Key</h2>
 <pre><code>php artisan key:<span class="hljs-keyword">generate</span> --show
 heroku <span class="hljs-keyword">config</span>:set APP_KEY={app_key_here}
@@ -47,18 +44,10 @@ heroku <span class="hljs-keyword">config</span>:set APP_KEY={app_key_here}
 <span class="hljs-attr">APP_DEBUG</span>=<span class="hljs-literal">FALSE</span>
 <span class="hljs-attr">APP_URL</span>={url ending with herokuapp.com}
 <span class="hljs-attr">LOG_CHANNEL</span>=errorlog
-</code></pre><h2 id="github-integration-optional-">GitHub Integration (optional)</h2>
-<p>Link an existing GitHub repo to your project, where <code>REMOTE_URL</code> is the remote repository URL ending with <code>.git</code>.</p>
-<pre><code>git remote <span class="hljs-keyword">add</span><span class="bash"> origin REMOTE_URL
-</span>git remote -v
 </code></pre><h2 id="commit-changes">Commit Changes</h2>
 <pre><code>git <span class="hljs-keyword">add</span><span class="bash"> .
 </span>git commit -m <span class="hljs-string">"Initial deployment"</span>
 </code></pre><h2 id="push-changes">Push Changes</h2>
-<p>If using Heroku:</p>
 <pre><code><span class="hljs-symbol">git</span> <span class="hljs-keyword">push </span>heroku master
-</code></pre><p>If using GitHub (with Heroku auto-deploy enabled):</p>
-<pre><code>git <span class="hljs-built_in">push</span> <span class="hljs-built_in">origin</span> master
-</code></pre>
 <br>
 </body></html>
