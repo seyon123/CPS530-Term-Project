@@ -14,3 +14,4 @@ require('./bootstrap');
 
 require('./components/Menu');
 require('./components/Demo');
+require('./components/Soundboard');

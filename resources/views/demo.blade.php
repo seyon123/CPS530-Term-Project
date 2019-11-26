@@ -25,8 +25,10 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div><br>
-                <div class="text m-b-md">Demo 1</div>
-                <div class="text m-b-md">Demo 2</div>
+                <br><br>
+                <div id="soundbox">
+                    <div id="soundboard"></div>
+                </div>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>

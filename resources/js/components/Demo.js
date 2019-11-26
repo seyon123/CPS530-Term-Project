@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.png';
 import {DemoPrev} from './Buttons';
 import {DemoNext} from './Buttons';
+import Soundboard from './Soundboard';
 
 export default class Title extends Component {
   render() {
@@ -11,9 +11,7 @@ export default class Title extends Component {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="card">
-              <div className="card-header">Demonstration of Frameworks</div>
-              <br></br>
-              <div className="card-body"><img src={logo} alt="Logo" height="200" /></div>
+              <div className="card-header">Jacky Ly Sound Board</div>
             </div>
           </div>
         </div>
@@ -22,5 +20,6 @@ export default class Title extends Component {
   }
 }
 ReactDOM.render(<Title />, document.getElementById('title'));
+ReactDOM.render(<Soundboard />, document.getElementById('soundboard'));
 ReactDOM.render(<DemoPrev />, document.getElementById('prevButton'));
 ReactDOM.render(<DemoNext />, document.getElementById('nextButton'));

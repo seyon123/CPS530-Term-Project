@@ -123,6 +123,10 @@ td, th{
     border-radius: 20px;
 }
 
+#soundbox {
+    margin: auto 20px;
+}
+
 @media screen and (max-width: 800px) {
     #navbar { display: none; }
     #menu { display: block; }
