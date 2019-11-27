@@ -25,18 +25,19 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div>
+                <div class="navBtn" id="nextButton" class="m-b-md"></div><br>
+                <br><br>
+                <div id="grid"></div>
+                <br>
+                <div class="navBtn" id="nextButton2" class="m-b-md"></div><br>
+                <br>
                 <div class="text m-b-md"><h4>Created By:</h4></div>
                 <div class="links">
-                    <div class="link-container"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
-                    <div class="link-container"><a href="https://github.com/Alliyah-M" target="_blank">Alliyah M</a></div>
-                    <div class="link-container"><a href="https://github.com/JawwadK" target="_blank">Jawwad K</a></div>
-                    <div class="link-container"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
+                    <div class="github-links"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
+                    <div class="github-links"><a href="https://github.com/Alliyah-M" target="_blank">Alliyah M</a></div>
+                    <div class="github-links"><a href="https://github.com/JawwadK" target="_blank">Jawwad K</a></div>
+                    <div class="github-links"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
                 </div>
-                <br>
-                <div class="navBtn" id="nextButton" class="m-b-md"></div>
-                <br><br>
-                <br>
-                <div id="grid"></div>
                 <br><br>
             </div>
         </div>

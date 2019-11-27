@@ -1,61 +1,69 @@
 <html>
-   <head>
-      <link rel="stylesheet" type="text/css" href="css/install.css"/>
-   </head>
-   <body>
-      <h2 id="prerequisites">Prerequisites</h2>
-      <ul>
-         <li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
-         <li><a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install" target="_blank">Heroku CLI</a></li>
-         <li><a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
-         <li><a href="https://www.php.net/downloads.php" target="_blank">PHP</a></li>
-         <li><a href="https://getcomposer.org/download/" target="_blank">Composer</a></li>
-      </ul>
-      <h2 id="run-composer-installer">Run Composer Installer</h2>
-      <pre><code>composer <span class="hljs-keyword">install</span>
+
+<head>
+      <link rel="stylesheet" type="text/css" href="css/install.css" />
+</head>
+
+<body>
+      <div id="install-content">
+            <h2 id="prerequisites">Prerequisites</h2>
+            <ul>
+                  <li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+                  <li><a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install"
+                              target="_blank">Heroku CLI</a></li>
+                  <li><a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
+                  <li><a href="https://www.php.net/downloads.php" target="_blank">PHP</a></li>
+                  <li><a href="https://getcomposer.org/download/" target="_blank">Composer</a></li>
+            </ul>
+            <h2 id="run-composer-installer">Run Composer Installer</h2>
+            <pre><code>composer <span class="hljs-keyword">install</span>
 </code></pre>
-      <h3 id="if-there-is-any-errors-related-to-composer-">If there is any errors related to Composer:</h3>
-      <pre><code><span class="hljs-attribute">composer update</span>
+            <h3 id="if-there-is-any-errors-related-to-composer-">If there is any errors related to Composer:</h3>
+            <pre><code><span class="hljs-attribute">composer update</span>
 </code></pre>
-      <h2 id="install-laravel">Install Laravel</h2>
-      <pre><code><span class="hljs-symbol">composer</span> <span class="hljs-meta">global</span> <span class="hljs-meta">require</span> laravel/installer
+            <h2 id="install-laravel">Install Laravel</h2>
+            <pre><code><span class="hljs-symbol">composer</span> <span class="hljs-meta">global</span> <span class="hljs-meta">require</span> laravel/installer
 </code></pre>
-      <h2 id="create-laravel-project">Create Laravel Project</h2>
-      <p>Change into the directory where the project is to be created, where <code>PROJECT_NAME</code> is the name of your project.</p>
-      <pre><code>laravel <span class="hljs-keyword">new</span> <span class="hljs-type">PROJECT_NAME</span>
+            <h2 id="create-laravel-project">Create Laravel Project</h2>
+            <p>Change into the directory where the project is to be created, where <code>PROJECT_NAME</code> is the name
+                  of your project.</p>
+            <pre><code>laravel <span class="hljs-keyword">new</span> <span class="hljs-type">PROJECT_NAME</span>
 cd PROJECT_NAME
 </code></pre>
-      <h2 id="add-procfile">Add Procfile</h2>
-      <p>Create a custom <code>Procfile</code> inside the project root folder with the following:</p>
-      <pre><code><span class="hljs-string">web:</span> vendor<span class="hljs-regexp">/bin/</span>heroku-php-apache2 <span class="hljs-keyword">public</span>/
+            <h2 id="add-procfile">Add Procfile</h2>
+            <p>Create a custom <code>Procfile</code> inside the project root folder with the following:</p>
+            <pre><code><span class="hljs-string">web:</span> vendor<span class="hljs-regexp">/bin/</span>heroku-php-apache2 <span class="hljs-keyword">public</span>/
 </code></pre>
-      <h2 id="initialize-git-repo">Initialize Git Repo</h2>
-      <pre><code>git init
+            <h2 id="initialize-git-repo">Initialize Git Repo</h2>
+            <pre><code>git init
 git <span class="hljs-keyword">add</span><span class="bash"> .
 </span>git commit -m <span class="hljs-string">"Installed Laravel"</span>
 </code></pre>
-      <h2 id="login-to-heroku">Login To Heroku & Create New App</h2>
-      <pre><code><span class="hljs-attribute">heroku login</span>
+            <h2 id="login-to-heroku">Login To Heroku & Create New App</h2>
+            <pre><code><span class="hljs-attribute">heroku login</span>
 <span class="hljs-attribute">heroku create</span>
 </code></pre>
-      <h2 id="setup-encryption-key">Setup Encryption Key</h2>
-      <pre><code>php artisan key:<span class="hljs-keyword">generate</span> --show
+            <h2 id="setup-encryption-key">Setup Encryption Key</h2>
+            <pre><code>php artisan key:<span class="hljs-keyword">generate</span> --show
 heroku <span class="hljs-keyword">config</span>:set APP_KEY={app_key_here}
 </code></pre>
-      <h2 id="add-config-vars-to-heroku">Add Config Vars To Heroku</h2>
-      <p>To set config vars inside Heroku, click &quot;Settings&quot; and then &quot;Reveal Config Vars&quot;. Add the following variables:</p>
-      <pre><code><span class="hljs-attr">APP_NAME</span>={app_name_here}
+            <h2 id="add-config-vars-to-heroku">Add Config Vars To Heroku</h2>
+            <p>To set config vars inside Heroku, click &quot;Settings&quot; and then &quot;Reveal Config Vars&quot;. Add
+                  the following variables:</p>
+            <pre><code><span class="hljs-attr">APP_NAME</span>={app_name_here}
 <span class="hljs-attr">APP_ENV</span>=production
 <span class="hljs-attr">APP_KEY</span>={app_key_here}
 <span class="hljs-attr">APP_DEBUG</span>=<span class="hljs-literal">FALSE</span>
 <span class="hljs-attr">APP_URL</span>={url ending with herokuapp.com}
 <span class="hljs-attr">LOG_CHANNEL</span>=errorlog
 </code></pre>
-      <h2 id="commit-changes">Commit and Push Changes</h2>
-      <pre><code>git <span class="hljs-keyword">add</span><span class="bash"> .
+            <h2 id="commit-changes">Commit and Push Changes</h2>
+            <pre><code>git <span class="hljs-keyword">add</span><span class="bash"> .
 </span>git commit -m <span class="hljs-string">"Initial deployment"</span>
 <span class="hljs-symbol">git</span> <span class="hljs-keyword">push </span>heroku master
 </code></pre>
-      <br>
-   </body>
+            <br>
+      </div>
+</body>
+
 </html>

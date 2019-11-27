@@ -26,3 +26,4 @@ export default class Title extends Component {
 ReactDOM.render(<Grid />, document.getElementById('grid'));
 ReactDOM.render(<Title />, document.getElementById('title'));
 ReactDOM.render(<HomeNext />, document.getElementById('nextButton'));
+ReactDOM.render(<HomeNext />, document.getElementById('nextButton2'));

@@ -50,7 +50,7 @@ html, body {
 }
 
 /* Links */
-.links > .link-container {
+.links > .link-container, .github-links {
     text-align: center;
     display: inline-block;
     margin: 0 10px;
@@ -59,7 +59,7 @@ html, body {
 }
 
 .links > .link-container > a {
-    color: #636b6f;
+    color: white;
     padding: 0 20px;
     font-size: 13px;
     font-weight: 600;
@@ -69,16 +69,33 @@ html, body {
     line-height: 40px;
 }
 
+.links > .github-links > a {
+    color: grey;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.links > .github-links > a:hover {
+    color: lightgrey;
+}
+
 .links > .link-container > a:hover {
-    color: darkgrey;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: #2196f3;
 }
 
 .links > .active {
-    background-color: lightgrey;
+    background-color: #2196f3;
 }
 
 #navigation {
-    margin-bottom: 50px;
+    margin: auto auto 50px auto;
+    background-color: #1976d2;
 }
 
 .navBtn {
@@ -87,13 +104,14 @@ html, body {
 }
 
 #navbar {
-    margin: 22px;
+    padding: 22px;
 }
 
 #menu {
     display: none;
-    margin: 14px;
+    padding: 14px;
     position: relative;
+    
 }
 
 table.snapshot {
@@ -118,9 +136,9 @@ td, th{
 }
 
 #grid {
-    margin: 0 4%;
-    background-color: whitesmoke;
-    border-radius: 20px;
+    margin: auto 25%;
+    /* background-color: whitesmoke;
+    border-radius: 20px; */
 }
 
 #soundboard {
@@ -140,5 +158,6 @@ td, th{
     #navbar { display: none; }
     #menu { display: block; }
     table.snapshot {width: auto; }
+    #grid { margin: auto 5%; }
     #soundboard > div > button { margin-top: 5px; }
 }

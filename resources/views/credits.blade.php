@@ -24,25 +24,14 @@
         </div>
         <div class="position-ref full-height">
             <div class="content">
-                <div id="title" class="title m-b-md"></div><br>
+                <div id="credits" class="title m-b-md"></div><br>
                 <div id="profilebox">
                     <div id="profile1"></div>
                     <div id="profile2"></div>
                     <div id="profile3"></div>
                     <div id="profile4"></div>
                 </div>
-                <div class="title m-b-md">Credits</div>
-                <div class="text m-b-md">
-                In nibh mi, viverra eget nisi nec, tempor varius magna. Quisque ipsum ligula, ullamcorper at urna ac, sollicitudin efficitur lacus.
-                In ornare lobortis ipsum, id hendrerit ligula. Fusce sodales nisl ac dolor fringilla, eu malesuada lacus vehicula.
-                </div>
-                <br>
-                <div class="title m-b-md">References</div>
-                <div class="text m-b-md">
-                Aliquam sed urna a leo molestie volutpat. Vestibulum egestas congue leo, ac aliquet tellus tincidunt non.
-                Etiam pretium, lacus non tempus condimentum, dolor ipsum convallis tortor, quis fermentum tellus ante in ligula.
-                Curabitur feugiat lectus vitae ipsum aliquam, ac ultricies ipsum suscipit.
-                </div>
+                <div id="references" class="title m-b-md"></div>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
