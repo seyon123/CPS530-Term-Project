@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
@@ -17,10 +18,11 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     padding: theme.spacing(2),
-    margin: '0 3%',
+    margin: '0 16px',
     textAlign: 'center',
     color: '#505050',
-    backgroundColor: 'transparent',
+    backgroundColor: '#fafafa',
+    borderRadius: 0,
     boxShadow: 'none',
     fontWeight: '400',
     fontSize: '26px',
@@ -33,6 +35,9 @@ export default function FullWidthGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={0}>
+        <Grid item xs={12}>
+        <Divider variant="middle" />
+        </Grid>
         {/* <Grid item xs={6}>
           <Paper className={classes.title}>MATERIAL UI</Paper>
         </Grid>
@@ -41,6 +46,9 @@ export default function FullWidthGrid() {
         </Grid> */}
         <Grid item xs={12}>
           <Paper className={classes.title}>Popularity</Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Divider variant="middle" />
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
@@ -56,9 +64,14 @@ export default function FullWidthGrid() {
             </ul>
             </Paper>
         </Grid>
-        
+        <Grid item xs={12}>
+          <Divider variant="middle" />
+        </Grid>
         <Grid item xs={12}>
           <Paper className={classes.title}>Strengths</Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Divider variant="middle" />
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
@@ -80,7 +93,13 @@ export default function FullWidthGrid() {
           </Paper>
         </Grid>
         <Grid item xs={12}>
+          <Divider variant="middle" />
+        </Grid>
+        <Grid item xs={12}>
           <Paper className={classes.title}>Weaknesses</Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Divider variant="middle" />
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
@@ -101,7 +120,13 @@ export default function FullWidthGrid() {
           </Paper>
         </Grid>
         <Grid item xs={12}>
+          <Divider variant="middle" />
+        </Grid>
+        <Grid item xs={12}>
           <Paper className={classes.title}>Examples and Use Cases</Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Divider variant="middle" />
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
