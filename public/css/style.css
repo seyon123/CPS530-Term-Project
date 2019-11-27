@@ -33,7 +33,7 @@ html, body {
 }
 
 .content {
-    margin-top: 10px;
+    margin-top: 120px;
     text-align: center;
 }
 
@@ -93,9 +93,16 @@ html, body {
     background-color: #2196f3;
 }
 
+
+/* Navigation */
 #navigation {
-    margin: auto auto 50px auto;
+    margin-bottom: 50px;
     background-color: #1976d2;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .navBtn {
