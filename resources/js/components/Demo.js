@@ -4,7 +4,7 @@ import {DemoPrev} from './Buttons';
 import {DemoNext} from './Buttons';
 import Soundboard from './Soundboard';
 
-export default class Title extends Component {
+export default class Demo extends Component {
   render() {
     return (
       <div className="container">
@@ -19,7 +19,7 @@ export default class Title extends Component {
     );
   }
 }
-ReactDOM.render(<Title />, document.getElementById('title'));
+ReactDOM.render(<Demo />, document.getElementById('demo'));
 ReactDOM.render(<Soundboard />, document.getElementById('soundboard'));
 ReactDOM.render(<DemoPrev />, document.getElementById('prevButton'));
 ReactDOM.render(<DemoNext />, document.getElementById('nextButton'));

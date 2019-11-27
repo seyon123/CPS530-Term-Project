@@ -13,7 +13,7 @@ const blueTheme = createMuiTheme({
       main: blue[700],
     },
     secondary: {
-      main: blue[500],
+      main: blue[50],
     },
   },
 });

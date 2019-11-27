@@ -98,7 +98,7 @@ export default function CreateDrawer() {
   return (
     <div>
       <IconButton onClick={toggleDrawer("left", true)}>
-        <MenuIcon />
+        <MenuIcon color="secondary"/>
       </IconButton>
       <SwipeableDrawer
         open={state.left}

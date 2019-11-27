@@ -24,16 +24,7 @@
         </div>
         <div class="position-ref full-height">
             <div class="content">
-                <div id="title" class="title m-b-md"></div><br>
-                <div class="text m-b-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec leo sit amet sem faucibus pulvinar. In nibh mi, viverra eget nisi nec, tempor varius magna.
-                Quisque ipsum ligula, ullamcorper at urna ac, sollicitudin efficitur lacus. Aenean varius mollis sapien, ac ultrices ex dapibus viverra.
-                </div>
-                <br>
-                <div class="text m-b-md">
-                Aliquam sed urna a leo molestie volutpat. Vestibulum egestas congue leo, ac aliquet tellus tincidunt non. Etiam pretium, lacus non tempus condimentum, dolor ipsum convallis tortor, quis fermentum tellus ante in ligula.
-                Curabitur feugiat lectus vitae ipsum aliquam, ac ultricies ipsum suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </div>
+                <div id="conclusion" class="title m-b-md"></div><br>
                 <br><br>
                 <div class="navBtn" id="prevButton" class="m-b-md"></div>
                 <div class="navBtn" id="nextButton" class="m-b-md"></div>
