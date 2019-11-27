@@ -33,10 +33,17 @@ export class References extends Component {
             <div className="card">
               <div className="card-header">References</div>
               <br></br>
-              <div><p style={{fontSize: '16px', margin: 'auto 20%'}}>Aliquam sed urna a leo molestie volutpat.
-              Vestibulum egestas congue leo, ac aliquet tellus tincidunt non.
-              Etiam pretium, lacus non tempus condimentum, dolor ipsum convallis tortor, quis fermentum tellus ante in ligula.
-              Curabitur feugiat lectus vitae ipsum aliquam, ac ultricies ipsum suscipit.</p></div>
+              <div className="card-body" style={{fontSize: '18px'}}>
+                  <a href='https://devcenter.heroku.com/articles/getting-started-with-php#set-up' style={{textDecoration: 'none'}} target='_blank'>Getting Started on Heroku with PHP</a>
+                  <br></br><br></br>
+                  <a href='https://devcenter.heroku.com/articles/getting-started-with-laravel' style={{textDecoration: 'none'}} target='_blank'>Getting Started with Laravel on Heroku</a>
+                  <br></br><br></br>
+                  <a href='https://laravel.com/docs/6.x/installation' style={{textDecoration: 'none'}} target='_blank'>Installation - Laravel</a>
+                  <br></br><br></br>
+                  <a href='https://dev.to/lvtdeveloper/using-react-in-a-laravel-application-8fp' style={{textDecoration: 'none'}} target='_blank'>How to use React in a Laravel application</a>
+                  <br></br><br></br>
+                  <a href='https://material-ui.com/getting-started/installation/' style={{textDecoration: 'none'}} target='_blank'>Installation - Material-UI</a>
+              </div>
             </div>
           </div>
         </div>

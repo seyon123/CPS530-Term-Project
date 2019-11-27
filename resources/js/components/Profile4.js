@@ -26,7 +26,7 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/images/"
+          image="/animals/bear.jpg"
           title="Jawwad K"
         />
         <CardContent>
