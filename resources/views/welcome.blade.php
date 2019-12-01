@@ -34,9 +34,9 @@
                 <div class="text m-b-md"><h4>Created By:</h4></div>
                 <div class="links">
                     <div class="github-links"><a href="https://github.com/lyjacky11" target="_blank">Jacky L</a></div>
+                    <div class="github-links"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
                     <div class="github-links"><a href="https://github.com/Alliyah-M" target="_blank">Alliyah M</a></div>
                     <div class="github-links"><a href="https://github.com/JawwadK" target="_blank">Jawwad K</a></div>
-                    <div class="github-links"><a href="https://github.com/seyon123" target="_blank">Seyon R</a></div>
                 </div>
                 <br><br>
             </div>

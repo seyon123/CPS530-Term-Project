@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {DemoPrev} from './Buttons';
 import {DemoNext} from './Buttons';
 import Soundboard from './Soundboard';
+import soundboard from './soundboard.png'
 
 export default class Demo extends Component {
   render() {
@@ -12,6 +13,8 @@ export default class Demo extends Component {
           <div className="col-md-8">
             <div className="card">
               <div className="card-header">Animal Soundboard</div>
+              <br></br>
+              <div className="card-body"><img src={soundboard} height="200" alt="Soundboard" /></div>
             </div>
           </div>
         </div>

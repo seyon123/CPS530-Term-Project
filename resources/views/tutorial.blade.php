@@ -25,7 +25,6 @@
         <div class="position-ref full-height">
             <div class="content">
                 <div id="title" class="title m-b-md"></div>
-                <br><br>
                 <?php
                 include 'tutorial.html';
                 ?>

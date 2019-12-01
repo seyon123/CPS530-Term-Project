@@ -1,27 +1,86 @@
 <html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="css/install.css" />
+  <link rel="stylesheet" type="text/css" href="css/markdown.css" />
 </head>
+
 <body>
-  <div id="install-content">
-    <h2 id="sample-code">Quick Start</h2>
-    <p><code>index.html:</code></p>
-    <pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"app"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
-            </code></pre>
-    <p><code>index.js:</code></p>
+  <div class="markdown">
+    <h3 id="we-will-be-creating-a-simple-hello-world-page-with-a-material-ui-button-and-an-image-">We will be creating a
+      simple &#39;Hello World&#39; page with a Material UI button and an image!</h3>
+    <p>Place an image file called <code>logo.png</code> inside the <code>resources/js/components</code> directory.</p>
+    <p>Create a new file in the directory above called <code>HelloWorld.js</code> with something like this:</p>
     <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 <span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
 <span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
+<span class="hljs-keyword">import</span> logo <span class="hljs-keyword">from</span> <span class="hljs-string">'./logo.png'</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"contained"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span>&gt;</span>
-      Hello World
-    <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>
-  );
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"row justify-content-center"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"col-md-8"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"card"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"card-header"</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">br</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{logo}</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Logo"</span>/&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"contained"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span>&gt;</span>
+                This is a Material UI button!
+              <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    );
+  }
 }
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>, document.querySelector('#app'));</span>
+ReactDOM.render(<span class="hljs-tag">&lt;<span class="hljs-name">HelloWorld</span> /&gt;</span>, document.getElementById('helloWorld'));</span>
 </code></pre>
+    <p>Then, inside the <code>resources/js</code> directory, include the React component you just created at the end of
+      the
+      <code>app.js</code> file.</p>
+    <pre><code class="lang-javascript"><span class="hljs-built_in">require</span>(<span class="hljs-string">'./components/HelloWorld'</span>);
+</code></pre>
+    <p>In the <code>resources/views</code> directory, edit the <code>welcome.blade.php</code> file and create a new
+      <code>&lt;div&gt;</code> inside the <code>content</code> class that looks similar to this:</p>
+    <pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"position-ref full-height"</span>&gt;
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"helloWorld"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title m-b-md"</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!-- React Component will show up here --&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</code></pre>
+    <p>Next, add the following line after the <code>&lt;/body&gt;</code> tag:</p>
+    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+    <p>To use Roboto font, add the following to the <code>&lt;head&gt;</code> of your files:</p>
+    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"</span> /&gt;</span>
+</code></pre>
+    <p>For responsive design, add the following to the <code>&lt;head&gt;</code> of your files:</p>
+    <pre><code class="lang-html">&lt;meta <span class="hljs-attr">name="viewport"</span> <span class="hljs-attr">content="minimum-scale=1,</span> <span class="hljs-attr">initial-scale=1,</span> <span class="hljs-attr">width=device-width,</span> <span class="hljs-attr">shrink-to-fit=no"/&gt;</span>
+</code></pre>
+    <p>Lastly, edit the <code>routes/web.php</code> file and add the following:</p>
+    <pre><code class="lang-php">Route::<span class="hljs-keyword">get</span>(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> view(<span class="hljs-string">'welcome'</span>);
+});
+</code></pre>
+    <h3 id="congratulations-you-have-now-made-a-simple-page-using-material-ui-and-laravel-">Congratulations! You have
+      now
+      made a simple page using Material UI and Laravel!</h3>
+      <br>
+    <h2 id="for-more-documentation-check-out-these-pages-">For more documentation, check out these pages!</h2>
+    <ul>
+      <li>
+        <p><a href="https://material-ui.com/">Material-UI Documentation</a></p>
+      </li>
+      <li>
+        <p><a href="https://laravel.com/docs/6.x">Laravel Documentation</a></p>
+      </li>
+    </ul>
   </div>
 </body>
+
 </html>

@@ -144,7 +144,7 @@ textarea {
   max-width: 100%;
 }
 
-#install-content {
+.markdown {
   margin: 0 auto;
   max-width: 50rem;
 }
@@ -179,6 +179,12 @@ pre {
   border-radius: 10px;
   padding: 1rem;
   text-align: left;
+}
+
+p > code {
+  background-color: whitesmoke;
+  border-radius: 7px;
+  padding: 7px;
 }
 
 blockquote {
