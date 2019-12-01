@@ -43,7 +43,19 @@ export class References extends Component {
                   <a href='https://dev.to/lvtdeveloper/using-react-in-a-laravel-application-8fp' style={{textDecoration: 'none'}} target='_blank'>How to use React in a Laravel application</a>
                   <br></br><br></br>
                   <a href='https://material-ui.com/getting-started/installation/' style={{textDecoration: 'none'}} target='_blank'>Installation - Material-UI</a>
-              </div>
+                  <br></br><br></br>
+                  <a href='https://x-team.com/blog/8-best-and-most-popular-react-libraries-in-2019/' style={{textDecoration: 'none'}} target='_blank'>Popularity of React UI Libraries</a>
+                  <br></br><br></br>
+                  <a href='https://devias.io/blog/top-5-react-ui-component-libraries-frameworks' style={{textDecoration: 'none'}} target='_blank'>Top Five React Frameworks for 2019</a>
+                  <br></br><br></br>
+                  <a href='https://ux.stackexchange.com/questions/81965/what-are-the-disadvantages-of-material-design' style={{textDecoration: 'none'}} target='_blank'>Disadvantages of Material-UI</a>
+                  <br></br><br></br>
+                  <a href='https://raygun.com/blog/top-php-frameworks/' style={{textDecoration: 'none'}} target='_blank'>Top PHP Frameworks</a>
+                  <br></br><br></br>
+                  <a href='https://nimapinfotech.com/blog/pros-and-cons-of-laravel/' style={{textDecoration: 'none'}} target='_blank'>Pros and Cons of Laravel</a>
+                  <br></br><br></br>
+                  <a href='https://www.valuecoders.com/blog/technology-and-apps/laravel-best-php-framework-2017/' style={{textDecoration: 'none'}} target='_blank'>Why Laravel is the Best PHP Framework</a>
+             </div>
             </div>
           </div>
         </div>
