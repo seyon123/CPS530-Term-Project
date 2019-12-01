@@ -11,7 +11,7 @@ export default class Conclusion extends Component {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="card">
-              <div className="card-header" style={{fontSize: '3rem'}}>Conclusion</div>
+              <div className="card-header" style={{fontSize: '2rem'}}>Conclusion</div>
               <div className="card-body">
               <p style={{textAlign: "center"}}>
               <img src={conclusion} alt="Conclusion" width="150"/>
