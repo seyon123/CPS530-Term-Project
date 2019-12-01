@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   card: {
@@ -27,24 +28,33 @@ export default function MediaCard() {
         <CardMedia
           className={classes.media}
           image="/images/seyon.jpg"
-          title="Seyon R"
+          title="Seyon Rajagopal"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Seyon R
+            Seyon Rajagopal
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          <Typography variant="body1" color="textPrimary" component="h1">
+            Frontend (Material UI / React)
+          </Typography>
+          <br></br>
+          <Divider/>
+          <br></br>
+          <Typography variant="body2" color="textSecondary" component="span" align="left">
+            <li>Registered domain name and pointed nameservers to Heroku</li>
+            <li>Used Material UI and React to create frontend elements</li>
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" component="a" href="https://github.com/seyon123">
           GitHub
         </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button size="small" color="primary" component="a" href="https://www.linkedin.com/in/seyon-rajagopal/">
+          LinkedIn
+        </Button>
+        <Button size="small" color="primary" component="a" href="https://seyonrajagopal.ca">
+          Website
         </Button>
       </CardActions>
     </Card>

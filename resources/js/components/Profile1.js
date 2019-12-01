@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   card: {
@@ -27,24 +28,34 @@ export default function MediaCard() {
         <CardMedia
           className={classes.media}
           image="/images/jacky.jpg"
-          title="Jacky L"
+          title="Jacky Ly"
+          component="a" href="https://github.com/lyjacky11"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Jacky L
+            Jacky Ly
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          <Typography variant="body1" color="textPrimary" component="h1">
+            Backend (Laravel)
+          </Typography>
+          <br></br>
+          <Divider/>
+          <br></br>
+          <Typography variant="body2" color="textSecondary" component="span" align="left">
+            <li>Configured GitHub repo and deployed Heroku app</li>
+            <li>Installed Laravel and wrote installation page</li>
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" component="a" href="https://github.com/lyjacky11">
           GitHub
         </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button size="small" color="primary" component="a" href="https://www.linkedin.com/in/lyjacky11/">
+          LinkedIn
+        </Button>
+        <Button size="small" color="primary" component="a" href="https://JackyLy.ca">
+          Website
         </Button>
       </CardActions>
     </Card>

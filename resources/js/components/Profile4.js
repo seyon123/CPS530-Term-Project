@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   card: {
@@ -26,25 +27,34 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/animals/bear.jpg"
-          title="Jawwad K"
+          image="/images/jawwad.jpg"
+          title="Jawwad Khan"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Jawwad K
+            Jawwad Khan
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          <Typography variant="body1" color="textPrimary" component="h1">
+            Frontend (HTML / CSS)
+          </Typography>
+          <br></br>
+          <Divider/>
+          <br></br>
+          <Typography variant="body2" color="textSecondary" component="span" align="left">
+            <li>Created summary of frameworks table</li>
+            <li>Implemented soundboard elements</li>
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" component="a" href="https://github.com/JawwadK">
           GitHub
         </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button size="small" color="primary" component="a" href="https://www.linkedin.com/in/jawwad-khan-b8b515171/">
+          LinkedIn
+        </Button>
+        <Button size="small" color="primary" component="a" href="http://www.scs.ryerson.ca/~j54khan/CPS530/">
+          Website
         </Button>
       </CardActions>
     </Card>
