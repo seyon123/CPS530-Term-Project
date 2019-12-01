@@ -29,6 +29,8 @@ export default function MediaCard() {
           className={classes.media}
           image="/images/jawwad.jpg"
           title="Jawwad Khan"
+          component="a" href="https://github.com/JawwadK"
+
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -53,7 +55,7 @@ export default function MediaCard() {
         <Button size="small" color="primary" component="a" href="https://www.linkedin.com/in/jawwad-khan-b8b515171/">
           LinkedIn
         </Button>
-        <Button size="small" color="primary" component="a" href="http://www.scs.ryerson.ca/~j54khan/CPS530/">
+        <Button size="small" color="primary" component="a" href="#">
           Website
         </Button>
       </CardActions>

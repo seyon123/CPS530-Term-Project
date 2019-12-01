@@ -29,6 +29,7 @@ export default function MediaCard() {
           className={classes.media}
           image="/images/alliyah.jpg"
           title="Alliyah Mohammed"
+          component="a" href="https://github.com/Alliyah-M"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

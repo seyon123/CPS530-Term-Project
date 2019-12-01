@@ -29,6 +29,7 @@ export default function MediaCard() {
           className={classes.media}
           image="/images/seyon.jpg"
           title="Seyon Rajagopal"
+          component="a" href="https://github.com/seyon123"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
