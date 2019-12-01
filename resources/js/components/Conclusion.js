@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.png';
+import conclusion from './conclusion.png';
 import { ConclusionPrev } from './Buttons';
 import { ConclusionNext } from './Buttons';
 
@@ -12,7 +12,11 @@ export default class Conclusion extends Component {
           <div className="col-md-8">
             <div className="card">
               <div className="card-header" style={{fontSize: '3rem'}}>Conclusion</div>
-              <br></br>
+              <div className="card-body">
+              <p style={{textAlign: "center"}}>
+              <img src={conclusion} alt="Conclusion" width="150"/>
+              </p>
+              </div>
               <div className="card-body">Performance</div>
               <br></br>
               <div className="card-body">
@@ -20,7 +24,6 @@ export default class Conclusion extends Component {
                 Overall, Material UI and Laravel performed well over our expectations.
                 There were numerous React Components available, all so widely customizable that we couldn't display them all at once.
                 Although the initial setup of the backend was difficult, it became easy to use and implement over time.
-                
               </p>
               </div>
               <br></br>
@@ -45,24 +48,20 @@ export default class Conclusion extends Component {
               <br></br>
               <div className="card-body">Learning Curve</div>
               <br></br>
-              <div className="card-body"><p style={{ fontSize: '16px', margin: 'auto 20%' }}>In comparison to 
-              regular HTML/CSS/JS/PHP,
-              Laravel's learning curve wasn't steep per say, however setting up a backend framework without prior 
-              experience was a bit challenging.
+              <div className="card-body"><p style={{ fontSize: '16px', margin: 'auto 20%' }}>
+                In comparison to regular HTML/CSS/JS/PHP,
+                Laravel's learning curve wasn't steep per say, however setting up a backend framework without prior 
+                experience was a bit challenging.
               </p>
               </div>
               <br></br>
               <div className="card-body">Retrospects and Regrets </div>
               <br></br>
               <div className="card-body"><p style={{ fontSize: '16px', margin: 'auto 20%' }}>
-              In retrospect, we would've invested more time into learning and understanding how 
+                In retrospect, we would've invested more time into learning and understanding how 
                 each of the frameworks work and their interactions with each other.
-
                 We don't regret using our frameworks, however, if given the choice we would've instead chosen frameworks 
                 which complement each other's libraries and features.
-
-
-
               </p>
               </div>
             </div>
